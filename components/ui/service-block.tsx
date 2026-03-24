@@ -31,7 +31,7 @@ export function ServiceBlock({ id, number, title, description, features, image, 
 
   const imageCol = (
     <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-surface-light">
-      <Image src={image} alt={title} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
+      <Image src={image} alt={`${title} services by Maple Custom Homes in Toronto and the GTA`} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
     </div>
   );
 

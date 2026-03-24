@@ -25,7 +25,7 @@ export default function HomePage() {
               <span className="text-gold">Done Right</span>
             </h1>
             <p className="text-sm md:text-base text-text-secondary mt-4 max-w-md leading-relaxed">
-              Renovations, remodels, and commercial build-outs across the GTA. One team, one point of contact, and a commitment to quality on every project.
+              Licensed general contractor serving Toronto, Mississauga, Vaughan, and the GTA. Home renovations, kitchen remodels, basement finishing, and commercial build-outs — one team, one point of contact.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 mt-8">
               <Link href="/contact" className="bg-gold text-black font-semibold py-3 px-8 rounded-md hover:bg-gold-dark transition-colors text-center">
@@ -43,7 +43,7 @@ export default function HomePage() {
               <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-surface-dark-alt">
                 <Image
                   src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80"
-                  alt="Modern Kitchen Renovation - Maple Custom Homes"
+                  alt="Kitchen renovation by Maple Custom Homes general contractor in Oakville Ontario"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"

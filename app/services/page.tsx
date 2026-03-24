@@ -6,8 +6,9 @@ import { SERVICES } from "@/lib/constants";
 import { ServicesBeforeAfter } from "@/components/ui/services-before-after";
 
 export const metadata: Metadata = {
-  title: "Our Services | Maple Custom Homes",
-  description: "Renovations, kitchen & bath remodeling, basement finishing, commercial build-outs, painting, and landscaping across the GTA.",
+  title: "Construction Services Toronto & GTA | Home Renovations, Kitchen Remodels",
+  description: "Expert renovation contractor in Toronto & the GTA. Kitchen remodels, bathroom renovations, basement finishing, commercial build-outs, painting & landscaping. Free estimates.",
+  alternates: { canonical: "https://maplecustomhomes.com/services" },
 };
 
 export default function ServicesPage() {
