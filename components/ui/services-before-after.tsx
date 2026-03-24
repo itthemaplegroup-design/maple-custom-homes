@@ -12,12 +12,12 @@ export function ServicesBeforeAfter() {
             <ImageComparisonImage
               src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80"
               className="grayscale"
-              alt="Kitchen before"
+              alt="Kitchen before renovation by general contractor in Toronto GTA"
               position="left"
             />
             <ImageComparisonImage
               src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80"
-              alt="Kitchen after"
+              alt="Modern kitchen after remodel by Maple Custom Homes Toronto"
               position="right"
             />
             <ImageComparisonSlider className="w-0.5 bg-white/30 backdrop-blur-sm">
@@ -34,12 +34,12 @@ export function ServicesBeforeAfter() {
             <ImageComparisonImage
               src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80"
               className="grayscale"
-              alt="Bathroom before"
+              alt="Bathroom before renovation by contractor in Mississauga GTA"
               position="left"
             />
             <ImageComparisonImage
               src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80"
-              alt="Bathroom after"
+              alt="Spa-like bathroom after renovation by Maple Custom Homes GTA"
               position="right"
             />
             <ImageComparisonSlider className="w-0.5 bg-white/30 backdrop-blur-sm">

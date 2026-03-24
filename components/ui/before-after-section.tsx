@@ -18,12 +18,12 @@ export function BeforeAfterSection() {
             <ImageComparisonImage
               src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&q=80"
               className="grayscale"
-              alt="Before renovation"
+              alt="Kitchen before renovation by Maple Custom Homes general contractor Toronto"
               position="left"
             />
             <ImageComparisonImage
               src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80"
-              alt="After renovation"
+              alt="Modern kitchen after renovation by Maple Custom Homes contractor in the GTA"
               position="right"
             />
             <ImageComparisonSlider className="w-0.5 bg-white/30 backdrop-blur-sm">

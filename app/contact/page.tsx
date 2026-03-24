@@ -24,6 +24,7 @@ export default function ContactPage() {
             label="GET IN TOUCH"
             heading="Contact Us"
             subtitle="Let's talk about your project. No obligation — just expert advice."
+            as="h1"
           />
         </div>
       </section>

@@ -27,9 +27,9 @@ export default function Footer() {
             <nav className="flex flex-col gap-1.5">
               <Link href="/" className="text-xs text-text-on-dark-muted hover:text-gold transition-colors">Home</Link>
               <Link href="/services" className="text-xs text-text-on-dark-muted hover:text-gold transition-colors">Services</Link>
+              <Link href="/about" className="text-xs text-text-on-dark-muted hover:text-gold transition-colors">About Us</Link>
+              <Link href="/faq" className="text-xs text-text-on-dark-muted hover:text-gold transition-colors">FAQ</Link>
               <Link href="/contact" className="text-xs text-text-on-dark-muted hover:text-gold transition-colors">Contact</Link>
-              <a href={SITE.phoneTel} className="text-xs text-text-on-dark-muted hover:text-gold transition-colors">{SITE.phone}</a>
-              <a href={SITE.emailHref} className="text-xs text-text-on-dark-muted hover:text-gold transition-colors">{SITE.email}</a>
             </nav>
           </div>
 
@@ -49,6 +49,10 @@ export default function Footer() {
           <p className="text-xs text-text-on-dark-muted">
             &copy; {new Date().getFullYear()} {SITE.name}. All rights reserved. | General Contractor serving Toronto & the GTA
           </p>
+          <div className="flex gap-4 justify-center mt-2">
+            <Link href="/privacy" className="text-xs text-text-on-dark-muted hover:text-gold transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="text-xs text-text-on-dark-muted hover:text-gold transition-colors">Terms of Service</Link>
+          </div>
         </div>
       </div>
     </footer>
