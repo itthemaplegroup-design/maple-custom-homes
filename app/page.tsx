@@ -1,65 +1,138 @@
+import Link from "next/link";
 import Image from "next/image";
+import { SectionHeader } from "@/components/ui/section-header";
+import { CTABanner } from "@/components/ui/cta-banner";
+import { StatsBar } from "@/components/ui/stats-bar";
+import { ServicePreviewCard } from "@/components/ui/service-preview-card";
+import { BeforeAfterSection } from "@/components/ui/before-after-section";
+import { SERVICE_PREVIEWS, TRUST_INDICATORS, WHY_CHOOSE_US } from "@/lib/constants";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      {/* Hero */}
+      <section className="bg-surface-light py-12 md:py-20 lg:py-28 px-6 lg:px-8 relative overflow-hidden">
+        {/* Decorative accents */}
+        <div className="absolute top-6 right-12 w-3 h-3 bg-gold rounded-full opacity-50 hidden sm:block" />
+        <div className="absolute top-14 right-20 w-2 h-2 bg-gold rotate-45 opacity-35 hidden sm:block" />
+        <div className="absolute top-[72px] right-9 w-1 h-5 bg-gold opacity-25 hidden sm:block" />
+
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left */}
+          <div>
+            <h1 className="text-3xl md:text-5xl font-bold text-text-primary leading-tight">
+              Custom Homes Designed{" "}
+              <span className="text-gold">Around Your Life</span>
+            </h1>
+            <p className="text-sm md:text-base text-text-secondary mt-4 max-w-md leading-relaxed">
+              From first sketch to final walkthrough — a seamless building experience rooted in transparency, quality craftsmanship, and respect for your investment.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 mt-8">
+              <Link href="/contact" className="bg-gold text-black font-semibold py-3 px-8 rounded-md hover:bg-gold-dark transition-colors text-center">
+                Get a Free Estimate
+              </Link>
+              <Link href="/services" className="border-2 border-text-primary text-text-primary font-semibold py-3 px-8 rounded-md hover:bg-text-primary hover:text-white transition-colors text-center">
+                View Our Services
+              </Link>
+            </div>
+          </div>
+
+          {/* Right — Featured project card */}
+          <div className="relative">
+            <div className="bg-surface-dark rounded-xl p-4 md:p-5 shadow-2xl rotate-0 lg:rotate-3 hover:rotate-0 transition-transform duration-300">
+              <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-surface-dark-alt">
+                <Image
+                  src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80"
+                  alt="The Ravine Estate - Custom Home"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  priority
+                />
+              </div>
+              <div className="flex justify-between mt-3 text-sm">
+                <div>
+                  <div className="text-gold">The Ravine Estate</div>
+                  <div className="text-text-on-dark-muted text-xs">Mississauga, ON</div>
+                </div>
+                <div className="text-right">
+                  <div className="text-gold">4,200 sq ft</div>
+                  <div className="text-text-on-dark-muted text-xs">Completed 2025</div>
+                </div>
+              </div>
+            </div>
+            {/* Floating accents */}
+            <div className="absolute -top-2 -left-2 w-5 h-5 bg-gold rounded-md rotate-45 opacity-60 hidden lg:block" />
+            <div className="absolute -bottom-2 -right-2 w-4 h-4 bg-gold rounded-full opacity-50 hidden lg:block" />
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        {/* Trust indicators */}
+        <div className="max-w-6xl mx-auto border-t border-border-light mt-16 pt-8 flex flex-wrap justify-center gap-x-8 gap-y-2">
+          {TRUST_INDICATORS.map((t) => (
+            <span key={t} className="text-xs md:text-sm text-text-muted">{t}</span>
+          ))}
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Stats */}
+      <StatsBar />
+
+      {/* Services Preview */}
+      <section className="bg-surface-light py-12 md:py-20 px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <SectionHeader
+            label="WHAT WE DO"
+            heading="Our Services"
+            subtitle="Full-service construction for residential and commercial projects across the GTA."
+          />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {SERVICE_PREVIEWS.map((s) => (
+              <ServicePreviewCard key={s.title} {...s} />
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <Link href="/services" className="text-gold font-semibold text-sm hover:text-gold-dark transition-colors">
+              View All Services &rarr;
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Image Comparison */}
+      <BeforeAfterSection />
+
+      {/* Why Choose Us */}
+      <section className="bg-surface-white py-12 md:py-20 px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <SectionHeader
+            label="WHY MAPLE"
+            heading="Why Choose Us"
+            subtitle="The difference is in the details."
+          />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+            {WHY_CHOOSE_US.map((item) => {
+              const Icon = item.icon;
+              return (
+                <div key={item.title} className="flex gap-3.5 items-start">
+                  <Icon className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
+                  <div>
+                    <h3 className="text-sm md:text-base font-semibold text-text-primary">{item.title}</h3>
+                    <p className="text-xs md:text-sm text-text-secondary mt-1">{item.description}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Banner */}
+      <CTABanner
+        headline="Ready to Start Your Project?"
+        subtitle="Book a free consultation — no obligation, just expert advice."
+        buttons={[{ label: "Book Your Free Consultation", href: "/contact", variant: "primary" }]}
+      />
+    </>
   );
 }
