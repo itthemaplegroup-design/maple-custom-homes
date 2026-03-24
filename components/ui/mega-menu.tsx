@@ -71,7 +71,7 @@ const MegaMenu = React.forwardRef<HTMLUListElement, MegaMenuProps>(
               {openMenu === navItem.label && navItem.subMenus && (
                 <div className="absolute left-0 top-full w-auto pt-2 z-10">
                   <motion.div
-                    className="w-max border border-white/10 bg-[#0A0A0A] p-4"
+                    className="w-max border border-white/10 bg-surface-dark p-4"
                     style={{
                       borderRadius: 16,
                     }}
@@ -92,7 +92,7 @@ const MegaMenu = React.forwardRef<HTMLUListElement, MegaMenuProps>(
                                     href="#"
                                     className="flex items-start space-x-3 group"
                                   >
-                                    <div className="flex size-9 shrink-0 items-center justify-center rounded-md border border-white/30 text-white transition-colors duration-300 group-hover:bg-white group-hover:text-[#0A0A0A]">
+                                    <div className="flex size-9 shrink-0 items-center justify-center rounded-md border border-white/30 text-white transition-colors duration-300 group-hover:bg-white group-hover:text-surface-dark">
                                       <Icon className="h-5 w-5 flex-none" />
                                     </div>
                                     <div className="w-max leading-5">
