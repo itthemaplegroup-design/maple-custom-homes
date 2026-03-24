@@ -5,6 +5,7 @@ import { CTABanner } from "@/components/ui/cta-banner";
 import { StatsBar } from "@/components/ui/stats-bar";
 import { ServicePreviewCard } from "@/components/ui/service-preview-card";
 import { BeforeAfterSection } from "@/components/ui/before-after-section";
+import { TestimonialsSection } from "@/components/ui/testimonials-section";
 import { SERVICE_PREVIEWS, TRUST_INDICATORS, WHY_CHOOSE_US } from "@/lib/constants";
 
 export default function HomePage() {
@@ -126,6 +127,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Testimonials */}
+      <TestimonialsSection />
 
       {/* CTA Banner */}
       <CTABanner
