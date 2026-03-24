@@ -15,7 +15,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Logo & tagline */}
           <div>
-            <Image src="/logo.svg" alt="Maple Custom Homes general contractor Toronto" width={140} height={45} className="h-10 w-auto mb-3" />
+            <Image src="/logo.svg" alt="Maple Custom Homes general contractor Toronto" width={140} height={45} className="h-10 w-auto mb-3 bg-white/90 rounded px-2 py-1" />
             <p className="text-xs text-text-on-dark-muted leading-relaxed max-w-xs">
               Licensed general contractor serving the Greater Toronto Area. Renovations, remodels, and commercial construction.
             </p>
