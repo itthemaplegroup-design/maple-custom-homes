@@ -36,8 +36,8 @@ export function ServiceBlock({ id, number, title, description, features, image, 
   );
 
   return (
-    <section id={id} className={`${bgClass} py-12 md:py-20 px-6 lg:px-8`}>
-      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section id={id} className={`${bgClass} py-8 md:py-12 px-6 lg:px-8`}>
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         {reversed ? <>{imageCol}{textCol}</> : <>{textCol}{imageCol}</>}
       </div>
     </section>

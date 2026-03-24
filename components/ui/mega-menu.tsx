@@ -11,6 +11,7 @@ export type MegaMenuItem = {
       label: string;
       description: string;
       icon: React.ElementType;
+      href?: string;
     }[];
   }[];
   link?: string;
@@ -36,15 +37,19 @@ const MegaMenu = React.forwardRef<HTMLUListElement, MegaMenuProps>(
         className={`relative flex items-center space-x-0 ${className || ""}`}
         {...props}
       >
-        {items.map((navItem) => (
+        {items.map((navItem) => {
+          const Tag = navItem.link ? "a" : "span";
+          const tagProps = navItem.link ? { href: navItem.link } : {};
+          return (
           <li
             key={navItem.label}
             className="relative"
             onMouseEnter={() => handleHover(navItem.label)}
             onMouseLeave={() => handleHover(null)}
           >
-            <button
-              className="relative flex cursor-pointer items-center justify-center gap-1 py-1.5 px-4 text-sm text-white/50 transition-colors duration-300 hover:text-white group"
+            <Tag
+              {...tagProps}
+              className="relative flex cursor-pointer items-center justify-center gap-1 py-1.5 px-4 text-sm text-text-secondary transition-colors duration-300 hover:text-text-primary group"
               onMouseEnter={() => setIsHover(navItem.id)}
               onMouseLeave={() => setIsHover(null)}
             >
@@ -59,13 +64,13 @@ const MegaMenu = React.forwardRef<HTMLUListElement, MegaMenuProps>(
               {(isHover === navItem.id || openMenu === navItem.label) && (
                 <motion.div
                   layoutId="hover-bg"
-                  className="absolute inset-0 size-full bg-white/10"
+                  className="absolute inset-0 size-full bg-gold/10"
                   style={{
                     borderRadius: 99,
                   }}
                 />
               )}
-            </button>
+            </Tag>
 
             <AnimatePresence>
               {openMenu === navItem.label && navItem.subMenus && (
@@ -89,7 +94,7 @@ const MegaMenu = React.forwardRef<HTMLUListElement, MegaMenuProps>(
                               return (
                                 <li key={item.label}>
                                   <a
-                                    href="#"
+                                    href={item.href || "/services"}
                                     className="flex items-start space-x-3 group"
                                   >
                                     <div className="flex size-9 shrink-0 items-center justify-center rounded-md border border-white/30 text-white transition-colors duration-300 group-hover:bg-white group-hover:text-surface-dark">
@@ -116,7 +121,8 @@ const MegaMenu = React.forwardRef<HTMLUListElement, MegaMenuProps>(
               )}
             </AnimatePresence>
           </li>
-        ))}
+        );
+        })}
       </ul>
     );
   }

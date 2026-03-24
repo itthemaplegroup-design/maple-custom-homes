@@ -10,9 +10,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Maple Custom Homes | Premium Custom Home Builder in the GTA",
+  title: "Maple Custom Homes | General Contractor in the GTA",
   description:
-    "Full-service custom home building, renovations, and commercial construction in the Greater Toronto Area. Get a free estimate today.",
+    "Licensed general contractor serving the Greater Toronto Area. Renovations, remodels, commercial build-outs, and more. Get a free estimate today.",
+  viewport: "width=device-width, initial-scale=1",
 };
 
 export default function RootLayout({

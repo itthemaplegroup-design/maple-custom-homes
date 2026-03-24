@@ -8,19 +8,17 @@ export default function Footer() {
         <Image
           src="/logo.svg"
           alt={SITE.name}
-          width={90}
-          height={30}
-          className="h-7 w-auto"
+          width={120}
+          height={40}
+          className="h-10 sm:h-12 w-auto"
         />
 
-        <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-sm text-text-on-dark-muted">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-x-4 text-xs sm:text-sm text-text-on-dark-muted text-center">
           <span>&copy; {new Date().getFullYear()} {SITE.name}</span>
-          <span className="hidden sm:inline">&middot;</span>
-          <a href={SITE.phoneTel} className="hover:text-text-on-dark transition-colors">
+          <a href={SITE.phoneTel} className="hover:text-gold transition-colors">
             {SITE.phone}
           </a>
-          <span className="hidden sm:inline">&middot;</span>
-          <a href={SITE.emailHref} className="hover:text-text-on-dark transition-colors">
+          <a href={SITE.emailHref} className="hover:text-gold transition-colors break-all">
             {SITE.email}
           </a>
         </div>

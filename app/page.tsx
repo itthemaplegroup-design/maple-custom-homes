@@ -21,11 +21,11 @@ export default function HomePage() {
           {/* Left */}
           <div>
             <h1 className="text-3xl md:text-5xl font-bold text-text-primary leading-tight">
-              Custom Homes Designed{" "}
-              <span className="text-gold">Around Your Life</span>
+              General Contracting{" "}
+              <span className="text-gold">Done Right</span>
             </h1>
             <p className="text-sm md:text-base text-text-secondary mt-4 max-w-md leading-relaxed">
-              From first sketch to final walkthrough — a seamless building experience rooted in transparency, quality craftsmanship, and respect for your investment.
+              Renovations, remodels, and commercial build-outs across the GTA. One team, one point of contact, and a commitment to quality on every project.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 mt-8">
               <Link href="/contact" className="bg-gold text-black font-semibold py-3 px-8 rounded-md hover:bg-gold-dark transition-colors text-center">
@@ -42,8 +42,8 @@ export default function HomePage() {
             <div className="bg-surface-dark rounded-xl p-4 md:p-5 shadow-2xl rotate-0 lg:rotate-3 hover:rotate-0 transition-transform duration-300">
               <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-surface-dark-alt">
                 <Image
-                  src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80"
-                  alt="The Ravine Estate - Custom Home"
+                  src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80"
+                  alt="Modern Kitchen Renovation - Maple Custom Homes"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -52,11 +52,11 @@ export default function HomePage() {
               </div>
               <div className="flex justify-between mt-3 text-sm">
                 <div>
-                  <div className="text-gold">The Ravine Estate</div>
-                  <div className="text-text-on-dark-muted text-xs">Mississauga, ON</div>
+                  <div className="text-gold">Full Kitchen Renovation</div>
+                  <div className="text-text-on-dark-muted text-xs">Oakville, ON</div>
                 </div>
                 <div className="text-right">
-                  <div className="text-gold">4,200 sq ft</div>
+                  <div className="text-gold">4 Weeks</div>
                   <div className="text-text-on-dark-muted text-xs">Completed 2025</div>
                 </div>
               </div>
@@ -68,7 +68,7 @@ export default function HomePage() {
         </div>
 
         {/* Trust indicators */}
-        <div className="max-w-6xl mx-auto border-t border-border-light mt-16 pt-8 flex flex-wrap justify-center gap-x-8 gap-y-2">
+        <div className="max-w-6xl mx-auto border-t border-border-light mt-8 md:mt-16 pt-6 md:pt-8 flex flex-wrap justify-center gap-x-6 gap-y-2">
           {TRUST_INDICATORS.map((t) => (
             <span key={t} className="text-xs md:text-sm text-text-muted">{t}</span>
           ))}
@@ -84,7 +84,7 @@ export default function HomePage() {
           <SectionHeader
             label="WHAT WE DO"
             heading="Our Services"
-            subtitle="Full-service construction for residential and commercial projects across the GTA."
+            subtitle="Residential renovations and commercial construction across the Greater Toronto Area."
           />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {SERVICE_PREVIEWS.map((s) => (

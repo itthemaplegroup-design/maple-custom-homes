@@ -12,6 +12,7 @@ import { NAV_ITEMS, SITE } from "@/lib/constants";
 const megaMenuItems: MegaMenuItem[] = NAV_ITEMS.map((item, idx) => ({
   id: idx + 1,
   label: item.label,
+  link: item.href,
   ...(item.subMenus
     ? {
         subMenus: item.subMenus.map((sub) => ({
@@ -20,10 +21,11 @@ const megaMenuItems: MegaMenuItem[] = NAV_ITEMS.map((item, idx) => ({
             label: i.label,
             description: i.description,
             icon: i.icon,
+            href: i.href,
           })),
         })),
       }
-    : { link: item.href }),
+    : {}),
 }));
 
 export default function Navbar() {
@@ -31,16 +33,16 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 bg-surface-dark border-b border-border-dark">
+    <header className="sticky top-0 z-50 bg-white border-b border-border-light shadow-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 lg:px-8">
         {/* Logo */}
         <Link href="/" className="shrink-0">
           <Image
             src="/logo.svg"
             alt={SITE.name}
-            width={120}
-            height={40}
-            className="h-10 w-auto"
+            width={180}
+            height={50}
+            className="h-8 sm:h-10 lg:h-12 w-auto"
             priority
           />
         </Link>
@@ -60,7 +62,7 @@ export default function Navbar() {
         {/* Mobile hamburger */}
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-md p-2 text-text-on-dark lg:hidden"
+          className="inline-flex items-center justify-center rounded-md p-2 text-text-primary lg:hidden"
           onClick={() => setMobileOpen((v) => !v)}
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
         >
@@ -70,7 +72,7 @@ export default function Navbar() {
 
       {/* Mobile dropdown */}
       {mobileOpen && (
-        <nav className="border-t border-border-dark bg-surface-dark px-4 pb-4 lg:hidden">
+        <nav className="border-t border-border-light bg-white px-4 pb-4 lg:hidden">
           <ul className="space-y-1 pt-2">
             {NAV_ITEMS.map((item) => {
               const isActive = pathname === item.href;
@@ -81,8 +83,8 @@ export default function Navbar() {
                     onClick={() => setMobileOpen(false)}
                     className={`block rounded-full px-4 py-2 text-sm transition-colors ${
                       isActive
-                        ? "bg-white/10 text-text-on-dark"
-                        : "text-text-on-dark-muted hover:text-text-on-dark"
+                        ? "bg-gold/10 text-text-primary font-semibold"
+                        : "text-text-secondary hover:text-text-primary"
                     }`}
                   >
                     {item.label}
@@ -96,7 +98,7 @@ export default function Navbar() {
                             <Link
                               href={subItem.href}
                               onClick={() => setMobileOpen(false)}
-                              className="block rounded-full px-4 py-1.5 text-sm text-text-on-dark-muted hover:text-text-on-dark"
+                              className="block rounded-full px-4 py-1.5 text-sm text-text-muted hover:text-text-primary"
                             >
                               {subItem.label}
                             </Link>
@@ -112,7 +114,7 @@ export default function Navbar() {
 
           <a
             href={SITE.phoneTel}
-            className="mt-4 flex items-center justify-center gap-2 rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-surface-dark transition-colors hover:bg-gold-dark"
+            className="mt-4 flex items-center justify-center gap-2 rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-black transition-colors hover:bg-gold-dark"
           >
             <Phone className="h-4 w-4" />
             Call Now

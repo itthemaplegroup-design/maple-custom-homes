@@ -15,10 +15,10 @@ export default function ContactPage() {
   return (
     <>
       {/* Page Header */}
-      <section className="bg-surface-light py-12 md:py-20 px-6 lg:px-8 relative overflow-hidden">
+      <section className="bg-surface-light py-8 md:py-12 px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute top-5 right-12 w-2.5 h-2.5 bg-gold rounded-full opacity-40 hidden sm:block" />
         <div className="absolute bottom-4 left-10 w-2 h-2 bg-gold rotate-45 opacity-30 hidden sm:block" />
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto [&>div]:mb-0">
           <SectionHeader
             label="GET IN TOUCH"
             heading="Contact Us"
@@ -49,7 +49,7 @@ export default function ContactPage() {
               <Mail className="w-6 h-6 text-gold" />
             </div>
             <p className="text-xs text-gold tracking-[2px] uppercase mt-4">EMAIL US</p>
-            <a href={SITE.emailHref} className="block text-lg md:text-xl font-semibold text-text-primary mt-2 hover:text-gold transition-colors">
+            <a href={SITE.emailHref} className="block text-base sm:text-lg md:text-xl font-semibold text-text-primary mt-2 hover:text-gold transition-colors break-all">
               {SITE.email}
             </a>
             <p className="text-xs md:text-sm text-text-muted mt-3 leading-relaxed">
