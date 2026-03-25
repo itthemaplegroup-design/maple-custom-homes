@@ -17,7 +17,7 @@ const testimonials: Testimonial[] = [
   },
   {
     text: "Their kitchen renovation transformed our 1990s kitchen into a modern dream. Custom cabinetry, quartz countertops, new plumbing — all done in five weeks. We couldn't be happier.",
-    image: "https://randomuser.me/api/portraits/women/3.jpg",
+    image: "https://randomuser.me/api/portraits/women/90.jpg",
     name: "Priya Sharma",
     role: "Homeowner, Brampton",
   },

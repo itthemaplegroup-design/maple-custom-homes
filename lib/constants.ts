@@ -1,5 +1,5 @@
 import {
-  Home, Hammer, Building2, UtensilsCrossed, ClipboardList, Trees,
+  Home, Hammer, Building2, UtensilsCrossed, ClipboardList,
   Shield, Clock, Gem, FileText, CheckCircle, Phone, Mail,
   MessageSquare, PenTool, HardHat, Paintbrush,
 } from "lucide-react";
@@ -32,7 +32,7 @@ export const NAV_ITEMS = [
         items: [
           { label: "Commercial Build-Outs", description: "On time, on budget, minimal disruption", icon: Building2, href: "/services#commercial" },
           { label: "Painting & Drywall", description: "Clean lines, flawless finishes", icon: Paintbrush, href: "/services#painting" },
-          { label: "Outdoor & Landscaping", description: "Extend your living space outside", icon: Trees, href: "/services#outdoor" },
+          { label: "Custom Builds", description: "New construction from the ground up", icon: HardHat, href: "/services#custom-builds" },
         ],
       },
     ],
@@ -67,7 +67,7 @@ export const SERVICES = [
     title: "Home Renovations",
     description: "From structural changes to complete interior overhauls, we handle every aspect of your renovation. Open-concept conversions, room additions, and whole-home upgrades \u2014 delivered on time with minimal disruption to your daily life.",
     features: ["Structural Modifications", "Open-Concept Conversions", "Room Additions", "Full Interior Overhauls"],
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
+    image: "/images/vaulted-ceiling.jpg",
   },
   {
     id: "kitchen-bath",
@@ -75,7 +75,7 @@ export const SERVICES = [
     title: "Kitchen & Bathroom Remodeling",
     description: "The rooms that matter most, built to the highest standard. Custom cabinetry, premium countertops, modern tile work, and complete plumbing and electrical upgrades \u2014 designed for how you actually live.",
     features: ["Custom Cabinetry", "Premium Countertops", "Plumbing & Electrical", "Tile & Finishes"],
-    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80",
+    image: "/images/after2.jpg",
   },
   {
     id: "basement",
@@ -83,7 +83,7 @@ export const SERVICES = [
     title: "Basement Finishing",
     description: "Turn unused square footage into functional living space. Home theatres, guest suites, home offices, and rental units \u2014 fully framed, insulated, drywalled, and finished to code.",
     features: ["Framing & Insulation", "Electrical & Plumbing", "Flooring & Drywall", "Egress Windows"],
-    image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80",
+    image: "/images/wine-bar.jpg",
   },
   {
     id: "commercial",
@@ -91,7 +91,7 @@ export const SERVICES = [
     title: "Commercial Build-Outs",
     description: "Professional commercial construction for retail, office, and restaurant spaces. We work around your schedule to minimize downtime and deliver a space that\u2019s ready for business.",
     features: ["Retail Fit-Outs", "Office Renovations", "After-Hours Work", "Code Compliance"],
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+    image: "/images/house-construction.jpg",
   },
   {
     id: "painting",
@@ -99,15 +99,15 @@ export const SERVICES = [
     title: "Painting & Drywall",
     description: "Expert interior and exterior painting, drywall installation, patching, and finishing. Clean prep work, premium paints, and attention to detail that shows in every corner.",
     features: ["Interior Painting", "Exterior Painting", "Drywall Install & Repair", "Texture & Finishing"],
-    image: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=800&q=80",
+    image: "/images/fireplace-tv.jpg",
   },
   {
-    id: "outdoor",
+    id: "custom-builds",
     number: "06",
-    title: "Outdoor & Landscaping",
-    description: "Complete your property with professional outdoor spaces. Custom decks, patios, fencing, interlocking pavers, and landscape grading \u2014 built to withstand Canadian seasons.",
-    features: ["Decks & Patios", "Fencing", "Interlocking & Pavers", "Landscape Grading"],
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
+    title: "Custom Builds",
+    description: "New construction from the ground up. Custom homes, additions, and ground-up builds \u2014 designed to your specifications and built to the highest standards.",
+    features: ["Custom Homes", "Additions", "Framing & Structure", "Full Project Management"],
+    image: "/images/framing.jpg",
   },
 ];
 

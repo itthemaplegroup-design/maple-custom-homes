@@ -30,8 +30,8 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Cards */}
-      <section className="bg-surface-white py-12 md:py-20 px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+      <section className="bg-surface-light py-12 md:py-20 px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Phone */}
           <div className="bg-surface-white border border-border-light rounded-xl p-6 shadow-sm text-center">
             <div className="w-14 h-14 bg-gold-light rounded-xl flex items-center justify-center mx-auto">
@@ -56,6 +56,23 @@ export default function ContactPage() {
             </a>
             <p className="text-xs md:text-sm text-text-muted mt-3 leading-relaxed">
               We respond within 24 hours.<br />Your information stays confidential.
+            </p>
+          </div>
+          {/* Instagram */}
+          <div className="bg-surface-white border border-border-light rounded-xl p-6 shadow-sm text-center">
+            <div className="w-14 h-14 bg-gold-light rounded-xl flex items-center justify-center mx-auto">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 text-gold">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+              </svg>
+            </div>
+            <p className="text-xs text-gold tracking-[2px] uppercase mt-4">FOLLOW US</p>
+            <a href="https://www.instagram.com/maplecustomhomesltd/" target="_blank" rel="noopener noreferrer" className="block text-sm sm:text-base md:text-lg font-semibold text-text-primary mt-2 hover:text-gold transition-colors break-all">
+              @maplecustomhomesltd
+            </a>
+            <p className="text-xs md:text-sm text-text-muted mt-3 leading-relaxed">
+              See our latest projects<br />and transformations.
             </p>
           </div>
         </div>

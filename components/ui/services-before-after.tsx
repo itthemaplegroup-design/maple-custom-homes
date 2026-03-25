@@ -10,13 +10,12 @@ export function ServicesBeforeAfter() {
         <div className="rounded-xl overflow-hidden">
           <ImageComparison className="aspect-[4/3] w-full" enableHover>
             <ImageComparisonImage
-              src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80"
-              className="grayscale"
+              src="/images/before1.jpg"
               alt="Kitchen before renovation by general contractor in Toronto GTA"
               position="left"
             />
             <ImageComparisonImage
-              src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80"
+              src="/images/after1.jpg"
               alt="Modern kitchen after remodel by Maple Custom Homes Toronto"
               position="right"
             />
@@ -32,14 +31,13 @@ export function ServicesBeforeAfter() {
         <div className="rounded-xl overflow-hidden">
           <ImageComparison className="aspect-[4/3] w-full" enableHover>
             <ImageComparisonImage
-              src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80"
-              className="grayscale"
-              alt="Bathroom before renovation by contractor in Mississauga GTA"
+              src="/images/before2.jpg"
+              alt="Kitchen before renovation by contractor in Mississauga GTA"
               position="left"
             />
             <ImageComparisonImage
-              src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80"
-              alt="Spa-like bathroom after renovation by Maple Custom Homes GTA"
+              src="/images/after2.jpg"
+              alt="Modern kitchen after renovation by Maple Custom Homes GTA"
               position="right"
             />
             <ImageComparisonSlider className="w-0.5 bg-white/30 backdrop-blur-sm">
@@ -47,7 +45,7 @@ export function ServicesBeforeAfter() {
             </ImageComparisonSlider>
           </ImageComparison>
         </div>
-        <p className="text-sm text-text-on-dark-muted mt-2 text-center">Bathroom Renovation</p>
+        <p className="text-sm text-text-on-dark-muted mt-2 text-center">Kitchen Renovation</p>
       </div>
     </div>
   );
