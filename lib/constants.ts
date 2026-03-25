@@ -37,6 +37,7 @@ export const NAV_ITEMS = [
       },
     ],
   },
+  { label: "Gallery", href: "/gallery" },
   { label: "Contact", href: "/contact" },
 ];
 
