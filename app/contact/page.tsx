@@ -15,8 +15,8 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      {/* Page Header */}
-      <section className="bg-surface-light py-8 md:py-12 px-6 lg:px-8 relative overflow-hidden">
+      {/* Page Header + Contact Cards (single section) */}
+      <section className="bg-surface-light pt-8 md:pt-12 pb-10 md:pb-14 px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute top-5 right-12 w-2.5 h-2.5 bg-gold rounded-full opacity-40 hidden sm:block" />
         <div className="absolute bottom-4 left-10 w-2 h-2 bg-gold rotate-45 opacity-30 hidden sm:block" />
         <div className="max-w-6xl mx-auto [&>div]:mb-0">
@@ -27,10 +27,6 @@ export default function ContactPage() {
             as="h1"
           />
         </div>
-      </section>
-
-      {/* Contact Cards */}
-      <section className="bg-surface-light py-12 md:py-20 px-6 lg:px-8">
         <div className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Phone */}
           <div className="bg-surface-white border border-border-light rounded-xl p-6 shadow-sm text-center">
@@ -79,7 +75,7 @@ export default function ContactPage() {
       </section>
 
       {/* Our Process */}
-      <section className="bg-surface-light py-12 md:py-20 px-6 lg:px-8">
+      <section className="bg-surface-white py-10 md:py-14 px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <SectionHeader
             label="HOW IT WORKS"
