@@ -6,12 +6,12 @@ interface ProcessStepProps {
 
 export function ProcessStep({ number, title, description }: ProcessStepProps) {
   return (
-    <div className="text-center">
-      <div className="w-10 h-10 bg-gold rounded-full flex items-center justify-center mx-auto text-sm font-bold text-black">
+    <div className="text-center group">
+      <div className="w-12 h-12 bg-accent/10 border-2 border-accent rounded-xl flex items-center justify-center mx-auto text-sm font-bold text-accent group-hover:bg-accent group-hover:text-white transition-all duration-300">
         {number}
       </div>
-      <h3 className="text-sm md:text-base font-semibold text-text-primary mt-3">{title}</h3>
-      <p className="text-xs md:text-sm text-text-secondary mt-1">{description}</p>
+      <h3 className="font-serif text-base md:text-lg font-semibold text-text-primary mt-4">{title}</h3>
+      <p className="text-sm text-text-secondary mt-2 leading-relaxed">{description}</p>
     </div>
   );
 }

@@ -102,10 +102,9 @@ export default function GalleryPage() {
   return (
     <>
       {/* Page Header */}
-      <section className="bg-surface-light py-8 md:py-12 px-6 lg:px-8 relative overflow-hidden">
-        <div className="absolute top-4 right-14 w-2.5 h-2.5 bg-gold rounded-full opacity-40 hidden sm:block" />
-        <div className="absolute bottom-5 left-8 w-2 h-2 bg-gold rotate-45 opacity-30 hidden sm:block" />
-        <div className="max-w-6xl mx-auto [&>div]:mb-0">
+      <section className="bg-surface-warm py-12 md:py-16 px-6 lg:px-8 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-72 h-72 bg-accent/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
+        <div className="max-w-6xl mx-auto [&>div]:mb-0 relative">
           <SectionHeader
             label="OUR WORK"
             heading="Project Gallery"
@@ -116,7 +115,7 @@ export default function GalleryPage() {
       </section>
 
       {/* Gallery */}
-      <section className="bg-surface-white py-10 md:py-14 px-6 lg:px-8">
+      <section className="bg-surface-white py-12 md:py-16 px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <GalleryGrid projects={PROJECTS} categories={CATEGORIES} />
         </div>

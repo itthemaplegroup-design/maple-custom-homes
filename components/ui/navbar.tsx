@@ -1,14 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, ArrowRight } from "lucide-react";
 import MegaMenu, { type MegaMenuItem } from "./mega-menu";
 import { NAV_ITEMS, SITE } from "@/lib/constants";
 
-/** Transform NAV_ITEMS into MegaMenuItem[] for the MegaMenu component */
 const megaMenuItems: MegaMenuItem[] = NAV_ITEMS.map((item, idx) => ({
   id: idx + 1,
   label: item.label,
@@ -30,11 +29,24 @@ const megaMenuItems: MegaMenuItem[] = NAV_ITEMS.map((item, idx) => ({
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-border-light shadow-sm">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 lg:px-8">
+    <header
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-white/95 backdrop-blur-md border-b border-border-light shadow-sm"
+          : "bg-white border-b border-border-light"
+      }`}
+    >
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3.5 lg:px-8">
         {/* Logo */}
         <Link href="/" className="shrink-0">
           <Image
@@ -42,17 +54,17 @@ export default function Navbar() {
             alt={SITE.name}
             width={180}
             height={50}
-            className="h-8 sm:h-10 lg:h-12 w-auto"
+            className="h-8 sm:h-10 lg:h-11 w-auto"
             priority
           />
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-2 lg:flex">
+        <nav className="hidden items-center gap-1 lg:flex">
           <MegaMenu items={megaMenuItems} />
           <a
             href={SITE.phoneTel}
-            className="ml-4 inline-flex items-center gap-2 rounded-full bg-gold px-5 py-2 text-sm font-semibold text-surface-dark transition-colors hover:bg-gold-dark"
+            className="ml-5 inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-accent-dark hover:shadow-lg hover:shadow-accent/20"
           >
             <Phone className="h-4 w-4" />
             Call Now
@@ -62,7 +74,7 @@ export default function Navbar() {
         {/* Mobile hamburger */}
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-md p-2 text-text-primary lg:hidden"
+          className="inline-flex items-center justify-center rounded-lg p-2.5 text-text-primary hover:bg-surface-warm transition-colors lg:hidden"
           onClick={() => setMobileOpen((v) => !v)}
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
         >
@@ -72,8 +84,8 @@ export default function Navbar() {
 
       {/* Mobile dropdown */}
       {mobileOpen && (
-        <nav className="border-t border-border-light bg-white px-4 pb-4 lg:hidden">
-          <ul className="space-y-1 pt-2">
+        <nav className="border-t border-border-light bg-white px-5 pb-5 lg:hidden">
+          <ul className="space-y-1 pt-3">
             {NAV_ITEMS.map((item) => {
               const isActive = pathname === item.href;
               return (
@@ -81,24 +93,24 @@ export default function Navbar() {
                   <Link
                     href={item.href}
                     onClick={() => setMobileOpen(false)}
-                    className={`block rounded-full px-4 py-2 text-sm transition-colors ${
+                    className={`flex items-center justify-between rounded-lg px-4 py-2.5 text-sm transition-colors ${
                       isActive
-                        ? "bg-gold/10 text-text-primary font-semibold"
-                        : "text-text-secondary hover:text-text-primary"
+                        ? "bg-accent-light text-text-primary font-semibold"
+                        : "text-text-secondary hover:text-text-primary hover:bg-surface-warm"
                     }`}
                   >
-                    {item.label}
+                    <span>{item.label}</span>
+                    <ArrowRight className="h-4 w-4 opacity-40" />
                   </Link>
-                  {/* Show sub-items inline on mobile */}
                   {item.subMenus && (
-                    <ul className="ml-4 mt-1 space-y-1">
+                    <ul className="ml-4 mt-1 space-y-0.5">
                       {item.subMenus.map((sub) =>
                         sub.items.map((subItem) => (
                           <li key={subItem.label}>
                             <Link
                               href={subItem.href}
                               onClick={() => setMobileOpen(false)}
-                              className="block rounded-full px-4 py-1.5 text-sm text-text-muted hover:text-text-primary"
+                              className="block rounded-lg px-4 py-2 text-sm text-text-muted hover:text-text-primary hover:bg-surface-warm transition-colors"
                             >
                               {subItem.label}
                             </Link>
@@ -114,7 +126,7 @@ export default function Navbar() {
 
           <a
             href={SITE.phoneTel}
-            className="mt-4 flex items-center justify-center gap-2 rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-black transition-colors hover:bg-gold-dark"
+            className="mt-4 flex items-center justify-center gap-2 rounded-lg bg-accent px-5 py-3 text-sm font-semibold text-white transition-all hover:bg-accent-dark"
           >
             <Phone className="h-4 w-4" />
             Call Now

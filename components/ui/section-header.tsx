@@ -11,16 +11,19 @@ interface SectionHeaderProps {
 
 export function SectionHeader({ label, heading, subtitle, align = "center", dark = false, as: Tag = "h2" }: SectionHeaderProps) {
   return (
-    <div className={cn("mb-12", align === "center" && "text-center")}>
-      <p className="text-xs font-medium text-gold uppercase tracking-[3px]">{label}</p>
-      <Tag className={cn("text-2xl md:text-3xl font-bold mt-2", dark ? "text-text-on-dark" : "text-text-primary")}>
+    <div className={cn("mb-14", align === "center" && "text-center")}>
+      <p className="text-xs font-semibold text-accent uppercase tracking-[3px]">{label}</p>
+      <Tag className={cn(
+        "font-serif text-3xl md:text-4xl font-semibold mt-3 tracking-tight",
+        dark ? "text-text-on-dark" : "text-text-primary"
+      )}>
         {heading}
       </Tag>
       {subtitle && (
         <p className={cn(
-          "text-sm md:text-base mt-3",
+          "text-base md:text-lg mt-4 leading-relaxed",
           dark ? "text-text-on-dark-muted" : "text-text-secondary",
-          align === "center" && "max-w-lg mx-auto"
+          align === "center" && "max-w-xl mx-auto"
         )}>
           {subtitle}
         </p>

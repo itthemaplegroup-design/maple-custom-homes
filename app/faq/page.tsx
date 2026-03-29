@@ -85,10 +85,9 @@ export default function FAQPage() {
       />
 
       {/* Page Header */}
-      <section className="bg-surface-light py-8 md:py-12 px-6 lg:px-8 relative overflow-hidden">
-        <div className="absolute top-5 right-12 w-2.5 h-2.5 bg-gold rounded-full opacity-40 hidden sm:block" />
-        <div className="absolute bottom-4 left-10 w-2 h-2 bg-gold rotate-45 opacity-30 hidden sm:block" />
-        <div className="max-w-6xl mx-auto [&>div]:mb-0">
+      <section className="bg-surface-warm py-12 md:py-16 px-6 lg:px-8 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-72 h-72 bg-accent/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
+        <div className="max-w-6xl mx-auto [&>div]:mb-0 relative">
           <SectionHeader
             label="FAQ"
             heading="Frequently Asked Questions"
@@ -98,20 +97,20 @@ export default function FAQPage() {
       </section>
 
       {/* FAQ Accordion */}
-      <section className="bg-surface-white py-12 md:py-20 px-6 lg:px-8">
+      <section className="bg-surface-white py-16 md:py-24 px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           {FAQ_ITEMS.map((item, index) => (
             <details
               key={index}
-              className="group border-b border-border-light [&[open]]:border-gold/40"
+              className="group border-b border-border-light [&[open]]:border-accent/30"
             >
-              <summary className="flex items-center justify-between cursor-pointer py-5 px-1 text-sm md:text-base font-semibold text-text-primary hover:text-gold transition-colors group-open:text-gold list-none [&::-webkit-details-marker]:hidden">
+              <summary className="flex items-center justify-between cursor-pointer py-6 px-1 text-base font-semibold text-text-primary hover:text-accent transition-colors group-open:text-accent list-none [&::-webkit-details-marker]:hidden">
                 <span>{item.question}</span>
-                <span className="ml-4 flex-shrink-0 text-text-muted group-open:text-gold transition-transform group-open:rotate-45 text-xl leading-none">
+                <span className="ml-4 flex-shrink-0 w-8 h-8 rounded-lg bg-surface-warm group-open:bg-accent-light flex items-center justify-center text-text-muted group-open:text-accent transition-all group-open:rotate-45 text-xl leading-none">
                   +
                 </span>
               </summary>
-              <div className="pb-5 px-1 text-sm text-text-secondary leading-relaxed">
+              <div className="pb-6 px-1 text-base text-text-secondary leading-relaxed">
                 {item.answer}
               </div>
             </details>

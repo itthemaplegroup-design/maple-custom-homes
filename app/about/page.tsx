@@ -45,10 +45,9 @@ export default function AboutPage() {
   return (
     <>
       {/* Page Header */}
-      <section className="bg-surface-light py-8 md:py-12 px-6 lg:px-8 relative overflow-hidden">
-        <div className="absolute top-5 right-12 w-2.5 h-2.5 bg-gold rounded-full opacity-40 hidden sm:block" />
-        <div className="absolute bottom-4 left-10 w-2 h-2 bg-gold rotate-45 opacity-30 hidden sm:block" />
-        <div className="max-w-6xl mx-auto [&>div]:mb-0">
+      <section className="bg-surface-warm py-12 md:py-16 px-6 lg:px-8 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-72 h-72 bg-accent/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
+        <div className="max-w-6xl mx-auto [&>div]:mb-0 relative">
           <SectionHeader
             label="ABOUT US"
             heading="Built on Integrity, Driven by Quality"
@@ -58,13 +57,13 @@ export default function AboutPage() {
       </section>
 
       {/* Our Story */}
-      <section className="bg-surface-white py-12 md:py-20 px-6 lg:px-8">
+      <section className="bg-surface-white py-16 md:py-24 px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <SectionHeader
             label="OUR STORY"
             heading="How We Got Here"
           />
-          <p className="text-sm md:text-base text-text-secondary leading-relaxed">
+          <p className="text-base md:text-lg text-text-secondary leading-relaxed">
             Founded over 15 years ago, Maple Custom Homes started with a simple
             belief: every homeowner deserves honest work, fair pricing, and a
             contractor they can trust. What began as a small renovation crew in
@@ -76,7 +75,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Approach */}
-      <section className="bg-surface-light py-12 md:py-20 px-6 lg:px-8">
+      <section className="bg-surface-warm py-16 md:py-24 px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <SectionHeader
             label="OUR APPROACH"
@@ -87,12 +86,12 @@ export default function AboutPage() {
             {APPROACH_ITEMS.map((item) => (
               <div
                 key={item.title}
-                className="bg-surface-white border border-border-light rounded-xl p-6 shadow-sm"
+                className="bg-surface-white border border-border-light rounded-2xl p-8 group hover:shadow-lg hover:shadow-accent/5 hover:border-accent/20 transition-all duration-300"
               >
-                <h3 className="text-base md:text-lg font-semibold text-text-primary">
+                <h3 className="font-serif text-lg md:text-xl font-semibold text-text-primary">
                   {item.title}
                 </h3>
-                <p className="text-sm text-text-secondary mt-3 leading-relaxed">
+                <p className="text-sm text-text-secondary mt-4 leading-relaxed">
                   {item.description}
                 </p>
               </div>
@@ -102,7 +101,7 @@ export default function AboutPage() {
       </section>
 
       {/* Areas We Serve */}
-      <section className="bg-surface-white py-12 md:py-20 px-6 lg:px-8">
+      <section className="bg-surface-white py-16 md:py-24 px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <SectionHeader
             label="SERVICE AREA"
@@ -111,9 +110,9 @@ export default function AboutPage() {
           />
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 max-w-3xl mx-auto">
             {SERVICE_AREAS.map((city) => (
-              <div key={city} className="flex items-center gap-2">
-                <span className="w-2 h-2 bg-gold rounded-full flex-shrink-0" />
-                <span className="text-sm md:text-base text-text-primary">
+              <div key={city} className="flex items-center gap-2.5">
+                <span className="w-2 h-2 bg-accent rounded-full flex-shrink-0" />
+                <span className="text-base text-text-primary">
                   {city}
                 </span>
               </div>

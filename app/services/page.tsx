@@ -15,10 +15,9 @@ export default function ServicesPage() {
   return (
     <>
       {/* Page Header */}
-      <section className="bg-surface-light py-8 md:py-12 px-6 lg:px-8 relative overflow-hidden">
-        <div className="absolute top-4 left-10 w-2 h-2 bg-gold rounded-full opacity-40 hidden sm:block" />
-        <div className="absolute bottom-5 right-16 w-3 h-3 bg-gold rotate-45 opacity-30 hidden sm:block" />
-        <div className="max-w-6xl mx-auto [&>div]:mb-0">
+      <section className="bg-surface-warm py-12 md:py-16 px-6 lg:px-8 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-72 h-72 bg-accent/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
+        <div className="max-w-6xl mx-auto [&>div]:mb-0 relative">
           <SectionHeader
             label="WHAT WE OFFER"
             heading="Our Services"
@@ -34,12 +33,12 @@ export default function ServicesPage() {
           key={service.id}
           {...service}
           reversed={idx % 2 === 1}
-          bgClass={idx % 2 === 0 ? "bg-surface-white" : "bg-surface-light"}
+          bgClass={idx % 2 === 0 ? "bg-surface-white" : "bg-surface-warm"}
         />
       ))}
 
       {/* Before & After */}
-      <section className="bg-surface-dark-alt py-12 md:py-20 px-6 lg:px-8">
+      <section className="bg-surface-dark-alt py-16 md:py-24 px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <SectionHeader
             label="TRANSFORMATIONS"

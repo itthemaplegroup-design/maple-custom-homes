@@ -65,20 +65,20 @@ const thirdColumn = testimonials.slice(6, 9);
 
 export function TestimonialsSection() {
   return (
-    <section className="bg-surface-light py-12 md:py-20 px-6 lg:px-8 relative">
+    <section className="bg-surface-warm py-16 md:py-24 px-6 lg:px-8 relative">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
           viewport={{ once: true }}
-          className="flex flex-col items-center justify-center max-w-lg mx-auto mb-10"
+          className="flex flex-col items-center justify-center max-w-xl mx-auto mb-14"
         >
-          <p className="text-xs font-medium text-gold uppercase tracking-[3px]">TESTIMONIALS</p>
-          <h2 className="text-2xl md:text-3xl font-bold text-text-primary tracking-tight mt-2 text-center">
+          <p className="text-xs font-semibold text-accent uppercase tracking-[3px]">TESTIMONIALS</p>
+          <h2 className="font-serif text-3xl md:text-4xl font-semibold text-text-primary tracking-tight mt-3 text-center">
             What Our Clients Say
           </h2>
-          <p className="text-sm md:text-base text-text-secondary text-center mt-3">
+          <p className="text-base md:text-lg text-text-secondary text-center mt-4 leading-relaxed">
             Hear from homeowners and business owners across the GTA.
           </p>
         </motion.div>
