@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://maplecustomhomes.com/sitemap.xml
+Sitemap: https://maplecustomhomes.ca/sitemap.xml

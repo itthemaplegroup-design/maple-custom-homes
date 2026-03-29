@@ -51,6 +51,20 @@ export const metadata: Metadata = {
     siteName: "Maple Custom Homes",
     locale: "en_CA",
     type: "website",
+    images: [
+      {
+        url: "https://maplecustomhomes.ca/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Maple Custom Homes — Licensed General Contractor Toronto & GTA",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Maple Custom Homes | General Contractor Toronto & GTA",
+    description: "Licensed general contractor serving Toronto and the GTA. Home renovations, kitchen & bath remodels, basement finishing, commercial build-outs.",
+    images: ["https://maplecustomhomes.ca/images/og-image.jpg"],
   },
   robots: {
     index: true,

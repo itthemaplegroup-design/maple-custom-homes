@@ -7,6 +7,15 @@ export const metadata: Metadata = {
   title: "FAQ | Common Renovation Questions Toronto",
   description:
     "Answers to frequently asked questions about home renovations, costs, timelines, permits, and working with a licensed general contractor in the Greater Toronto Area.",
+  keywords: [
+    "renovation cost Toronto",
+    "how long does renovation take",
+    "renovation permits Toronto",
+    "general contractor FAQ",
+    "home renovation questions GTA",
+    "kitchen renovation cost Ontario",
+    "basement finishing cost Toronto",
+  ],
   alternates: { canonical: "https://maplecustomhomes.ca/faq" },
 };
 
@@ -92,6 +101,7 @@ export default function FAQPage() {
             label="FAQ"
             heading="Frequently Asked Questions"
             subtitle="Answers to common questions about our services, pricing, and process."
+            as="h1"
           />
         </div>
       </section>

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy",
+  title: "Privacy Policy | Maple Custom Homes Toronto",
   description:
-    "Privacy Policy for Maple Custom Homes. Learn how we collect, use, and protect your personal information.",
+    "Privacy Policy for Maple Custom Homes. Learn how we collect, use, and protect your personal information. Licensed general contractor serving Toronto & GTA.",
   alternates: { canonical: "https://maplecustomhomes.ca/privacy" },
 };
 

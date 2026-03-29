@@ -8,6 +8,17 @@ import { ServicesBeforeAfter } from "@/components/ui/services-before-after";
 export const metadata: Metadata = {
   title: "Renovation Services Toronto & GTA",
   description: "Expert renovation contractor in Toronto & the GTA. Kitchen remodels, bathroom renovations, basement finishing, commercial build-outs, painting & custom builds. Free estimates.",
+  keywords: [
+    "home renovation services Toronto",
+    "kitchen renovation contractor GTA",
+    "bathroom remodeling Toronto",
+    "basement finishing contractor",
+    "commercial build-out Toronto",
+    "painting contractor GTA",
+    "custom home builder Ontario",
+    "residential renovation services",
+    "general contractor services Toronto",
+  ],
   alternates: { canonical: "https://maplecustomhomes.ca/services" },
 };
 

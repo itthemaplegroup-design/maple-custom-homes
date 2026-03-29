@@ -38,6 +38,7 @@ export const NAV_ITEMS = [
     ],
   },
   { label: "Gallery", href: "/gallery" },
+  { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
 

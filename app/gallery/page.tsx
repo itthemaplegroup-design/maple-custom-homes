@@ -4,8 +4,16 @@ import { CTABanner } from "@/components/ui/cta-banner";
 import { GalleryGrid } from "@/components/ui/gallery-grid";
 
 export const metadata: Metadata = {
-  title: "Project Gallery | Our Work",
+  title: "Renovation Gallery | Before & After Projects Toronto & GTA",
   description: "Browse completed projects by Maple Custom Homes — kitchen renovations, bathroom remodels, custom fireplaces, basement finishing, and new construction across the GTA.",
+  keywords: [
+    "renovation before and after Toronto",
+    "kitchen renovation gallery GTA",
+    "bathroom remodel photos",
+    "basement finishing portfolio",
+    "contractor project gallery Ontario",
+    "home renovation pictures Toronto",
+  ],
   alternates: { canonical: "https://maplecustomhomes.ca/gallery" },
 };
 
@@ -93,6 +101,27 @@ const PROJECTS = [
     category: "Others",
     title: "Multi-Unit Build",
     location: "Barrie, ON",
+  },
+  {
+    src: "/images/heated-flooring.jpg",
+    alt: "Radiant heated floor installation in new construction",
+    category: "Others",
+    title: "Heated Floor Installation",
+    location: "GTA, ON",
+  },
+  {
+    src: "/images/kitchen-white-marble.jpg",
+    alt: "White kitchen with quartz countertops and marble backsplash",
+    category: "Kitchen",
+    title: "White Marble Kitchen",
+    location: "GTA, ON",
+  },
+  {
+    src: "/images/bathroom-tub.jpg",
+    alt: "Freestanding tub with patterned tile floor and glass shower",
+    category: "Bathroom",
+    title: "Freestanding Tub & Tile",
+    location: "GTA, ON",
   },
 ];
 

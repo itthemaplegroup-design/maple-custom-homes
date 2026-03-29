@@ -53,10 +53,10 @@ const MegaMenu = React.forwardRef<HTMLUListElement, MegaMenuProps>(
               onMouseEnter={() => setIsHover(navItem.id)}
               onMouseLeave={() => setIsHover(null)}
             >
-              <span className="font-medium">{navItem.label}</span>
+              <span className="relative z-10 font-medium">{navItem.label}</span>
               {navItem.subMenus && (
                 <ChevronDown
-                  className={`h-3.5 w-3.5 transition-transform duration-200 group-hover:rotate-180 ${
+                  className={`relative z-10 h-3.5 w-3.5 transition-transform duration-200 group-hover:rotate-180 ${
                     openMenu === navItem.label ? "rotate-180" : ""
                   }`}
                 />
@@ -64,7 +64,7 @@ const MegaMenu = React.forwardRef<HTMLUListElement, MegaMenuProps>(
               {(isHover === navItem.id || openMenu === navItem.label) && (
                 <motion.div
                   layoutId="hover-bg"
-                  className="absolute inset-0 size-full bg-surface-warm"
+                  className="absolute inset-0 size-full bg-accent/10"
                   style={{
                     borderRadius: 10,
                   }}

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service",
+  title: "Terms of Service | Maple Custom Homes Toronto",
   description:
-    "Terms of Service for the Maple Custom Homes website. Please read these terms carefully before using our website.",
+    "Terms of Service for Maple Custom Homes. General contractor terms and conditions for renovation projects in Toronto & the GTA.",
   alternates: { canonical: "https://maplecustomhomes.ca/terms" },
 };
 
