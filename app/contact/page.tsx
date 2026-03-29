@@ -8,7 +8,7 @@ import { SITE, PROCESS_STEPS } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Contact Us | Free Renovation Estimate Toronto & GTA",
   description: "Contact Maple Custom Homes for a free renovation consultation in Toronto and the GTA. Call (647) 960-4017. Licensed general contractor, fast response.",
-  alternates: { canonical: "https://maplecustomhomes.com/contact" },
+  alternates: { canonical: "https://maplecustomhomes.ca/contact" },
 };
 
 export default function ContactPage() {

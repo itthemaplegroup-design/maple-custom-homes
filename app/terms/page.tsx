@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "Terms of Service",
   description:
     "Terms of Service for the Maple Custom Homes website. Please read these terms carefully before using our website.",
-  alternates: { canonical: "https://maplecustomhomes.com/terms" },
+  alternates: { canonical: "https://maplecustomhomes.ca/terms" },
 };
 
 export default function TermsPage() {
@@ -115,10 +115,10 @@ export default function TermsPage() {
           <li>
             Email:{" "}
             <a
-              href="mailto:info@maplecustomhomes.com"
+              href="mailto:info@maplecustomhomes.ca"
               className="text-gold hover:underline"
             >
-              info@maplecustomhomes.com
+              info@maplecustomhomes.ca
             </a>
           </li>
         </ul>

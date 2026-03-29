@@ -9,8 +9,8 @@ export const SITE = {
   tagline: "Quality Construction. Honest Work. Built to Last.",
   phone: "(647) 960-4017",
   phoneTel: "tel:6479604017",
-  email: "info@maplecustomhomes.com",
-  emailHref: "mailto:info@maplecustomhomes.com",
+  email: "info@maplecustomhomes.ca",
+  emailHref: "mailto:info@maplecustomhomes.ca",
 };
 
 export const NAV_ITEMS = [

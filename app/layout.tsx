@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Maple Custom Homes | General Contractor Toronto & GTA",
     description: "Licensed general contractor serving Toronto and the GTA. Home renovations, kitchen & bath remodels, basement finishing, commercial build-outs. Get a free estimate.",
-    url: "https://maplecustomhomes.com",
+    url: "https://maplecustomhomes.ca",
     siteName: "Maple Custom Homes",
     locale: "en_CA",
     type: "website",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: "https://maplecustomhomes.com",
+    canonical: "https://maplecustomhomes.ca",
   },
 };
 
@@ -76,9 +76,9 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "GeneralContractor",
               name: "Maple Custom Homes",
-              url: "https://maplecustomhomes.com",
+              url: "https://maplecustomhomes.ca",
               telephone: "+1-647-960-4017",
-              email: "info@maplecustomhomes.com",
+              email: "info@maplecustomhomes.ca",
               description:
                 "Licensed general contractor serving the Greater Toronto Area. Home renovations, kitchen and bathroom remodelling, basement finishing, commercial build-outs, painting, drywall, and custom builds.",
               areaServed: [

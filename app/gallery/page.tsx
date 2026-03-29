@@ -6,7 +6,7 @@ import { GalleryGrid } from "@/components/ui/gallery-grid";
 export const metadata: Metadata = {
   title: "Project Gallery | Our Work",
   description: "Browse completed projects by Maple Custom Homes — kitchen renovations, bathroom remodels, custom fireplaces, basement finishing, and new construction across the GTA.",
-  alternates: { canonical: "https://maplecustomhomes.com/gallery" },
+  alternates: { canonical: "https://maplecustomhomes.ca/gallery" },
 };
 
 const PROJECTS = [

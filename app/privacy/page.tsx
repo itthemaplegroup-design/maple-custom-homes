@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
     "Privacy Policy for Maple Custom Homes. Learn how we collect, use, and protect your personal information.",
-  alternates: { canonical: "https://maplecustomhomes.com/privacy" },
+  alternates: { canonical: "https://maplecustomhomes.ca/privacy" },
 };
 
 export default function PrivacyPage() {
@@ -112,10 +112,10 @@ export default function PrivacyPage() {
           <li>
             Email:{" "}
             <a
-              href="mailto:info@maplecustomhomes.com"
+              href="mailto:info@maplecustomhomes.ca"
               className="text-gold hover:underline"
             >
-              info@maplecustomhomes.com
+              info@maplecustomhomes.ca
             </a>
           </li>
         </ul>

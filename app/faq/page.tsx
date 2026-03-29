@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "FAQ | Common Renovation Questions Toronto",
   description:
     "Answers to frequently asked questions about home renovations, costs, timelines, permits, and working with a licensed general contractor in the Greater Toronto Area.",
-  alternates: { canonical: "https://maplecustomhomes.com/faq" },
+  alternates: { canonical: "https://maplecustomhomes.ca/faq" },
 };
 
 const FAQ_ITEMS = [
@@ -49,7 +49,7 @@ const FAQ_ITEMS = [
   {
     question: "Do you offer free estimates?",
     answer:
-      "Yes. Contact us at (647) 960-4017 or info@maplecustomhomes.com to schedule a free, no-obligation consultation and estimate.",
+      "Yes. Contact us at (647) 960-4017 or info@maplecustomhomes.ca to schedule a free, no-obligation consultation and estimate.",
   },
   {
     question: "What sets Maple Custom Homes apart from other contractors?",

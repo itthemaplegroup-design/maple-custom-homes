@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "About Us | Licensed General Contractor Toronto",
   description:
     "Maple Custom Homes is a licensed general contractor serving the Greater Toronto Area for over 15 years. Honest work, fair pricing, and quality craftsmanship on every project.",
-  alternates: { canonical: "https://maplecustomhomes.com/about" },
+  alternates: { canonical: "https://maplecustomhomes.ca/about" },
 };
 
 const APPROACH_ITEMS = [
