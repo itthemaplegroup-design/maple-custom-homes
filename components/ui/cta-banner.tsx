@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ShimmerButton } from "@/components/ui/shimmer-button";
 
 interface CTABannerProps {
   headline: string;
@@ -17,19 +18,21 @@ export function CTABanner({ headline, subtitle, buttons }: CTABannerProps) {
         <h2 className="font-serif text-3xl md:text-4xl font-semibold text-text-on-dark tracking-tight">{headline}</h2>
         <p className="text-base md:text-lg text-text-on-dark-muted mt-4 max-w-lg mx-auto">{subtitle}</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
-          {buttons.map((btn) => (
-            <Link
-              key={btn.label}
-              href={btn.href}
-              className={
-                btn.variant === "primary"
-                  ? "bg-accent text-white font-semibold py-3.5 px-8 rounded-lg hover:bg-accent-dark transition-all hover:shadow-lg hover:shadow-accent/20"
-                  : "border border-white/20 text-text-on-dark font-semibold py-3.5 px-8 rounded-lg hover:bg-white/5 transition-all"
-              }
-            >
-              {btn.label}
-            </Link>
-          ))}
+          {buttons.map((btn) =>
+            btn.variant === "primary" ? (
+              <ShimmerButton key={btn.label} href={btn.href}>
+                {btn.label}
+              </ShimmerButton>
+            ) : (
+              <Link
+                key={btn.label}
+                href={btn.href}
+                className="border border-white/20 text-text-on-dark font-semibold py-3.5 px-8 rounded-lg hover:bg-white/5 transition-all"
+              >
+                {btn.label}
+              </Link>
+            )
+          )}
         </div>
       </div>
     </section>
