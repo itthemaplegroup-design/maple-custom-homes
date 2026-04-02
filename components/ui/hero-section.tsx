@@ -60,12 +60,12 @@ export function HeroSection() {
 
         {/* Right — Featured project card */}
         <motion.div
-          initial={{ opacity: 0, y: 30, rotate: 0 }}
-          animate={{ opacity: 1, y: 0, rotate: 2 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          className="relative"
+          className="relative lg:rotate-2 lg:hover:rotate-0 transition-transform duration-500"
         >
-          <div className="bg-surface-dark-alt rounded-2xl p-5 shadow-2xl hover:rotate-0 transition-transform duration-500">
+          <div className="bg-surface-dark-alt rounded-2xl p-5 shadow-2xl">
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-surface-dark">
               <Image
                 src="/images/vaulted-ceiling.jpg"
