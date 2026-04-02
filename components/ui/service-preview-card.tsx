@@ -27,11 +27,11 @@ function ServicePreviewCard({ icon: Icon, title, description }: ServicePreviewCa
         transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
       />
 
-      <div className="w-14 h-14 bg-accent-light rounded-xl flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-all duration-300">
+      <div className="w-14 h-14 bg-accent-light rounded-xl flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-all duration-300 mx-auto md:mx-0">
         <Icon className="w-6 h-6 text-accent group-hover:text-white transition-colors duration-300" />
       </div>
-      <h3 className="font-serif text-xl font-semibold text-text-primary mt-5">{title}</h3>
-      <p className="text-sm text-text-secondary mt-3 leading-relaxed">{description}</p>
+      <h3 className="font-serif text-xl font-semibold text-text-primary mt-5 text-center md:text-left">{title}</h3>
+      <p className="text-sm text-text-secondary mt-3 leading-relaxed text-center md:text-left">{description}</p>
     </motion.div>
   );
 }
