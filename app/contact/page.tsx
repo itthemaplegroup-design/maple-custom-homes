@@ -70,7 +70,7 @@ export default function ContactPage() {
               </svg>
             </div>
             <p className="text-xs text-accent tracking-[2px] uppercase mt-5 font-semibold">FOLLOW US</p>
-            <a href="https://www.instagram.com/maplecustomhomesltd/" target="_blank" rel="noopener noreferrer" className="block text-base sm:text-lg font-semibold text-text-primary mt-2 hover:text-accent transition-colors break-all">
+            <a href="https://www.instagram.com/maplecustomhomesltd/" target="_blank" rel="noopener noreferrer" aria-label="@maplecustomhomesltd (opens in a new tab)" className="block text-base sm:text-lg font-semibold text-text-primary mt-2 hover:text-accent transition-colors break-all">
               @maplecustomhomesltd
             </a>
             <p className="text-sm text-text-muted mt-3 leading-relaxed">

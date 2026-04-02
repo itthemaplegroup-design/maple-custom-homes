@@ -36,7 +36,7 @@ const FAQ_ITEMS: { question: string; answer: string; richAnswer?: ReactNode }[] 
     question: "How much does a home renovation cost in Toronto?",
     answer:
       "Costs vary based on scope. Kitchen renovations typically range from $25,000\u2013$75,000, bathroom renovations $15,000\u2013$35,000, and basement finishing $30,000\u2013$60,000. We provide detailed, no-obligation quotes for every project.",
-    richAnswer: <>Costs vary based on scope. Kitchen renovations typically range from $25,000–$75,000, bathroom renovations $15,000–$35,000, and basement finishing $30,000–$60,000. We provide detailed, no-obligation quotes for every project. <Link href="/contact" className="text-accent hover:underline">Get a free estimate</Link>.</>,
+    richAnswer: <>Costs vary based on scope. Kitchen renovations typically range from $25,000–$75,000, bathroom renovations $15,000–$35,000, and basement finishing $30,000–$60,000. We provide detailed, no-obligation quotes for every project. <Link href="/contact" className="text-accent underline hover:no-underline">Get a free estimate</Link>.</>,
   },
   {
     question: "How long does a typical renovation take?",
@@ -62,19 +62,19 @@ const FAQ_ITEMS: { question: string; answer: string; richAnswer?: ReactNode }[] 
     question: "Do you offer free estimates?",
     answer:
       "Yes. Contact us at (647) 960-4017 or info@maplecustomhomes.ca to schedule a free, no-obligation consultation and estimate.",
-    richAnswer: <>Yes. <Link href="/contact" className="text-accent hover:underline">Contact us</Link> at <a href="tel:6479604017" className="text-accent hover:underline">(647) 960-4017</a> or <a href="mailto:info@maplecustomhomes.ca" className="text-accent hover:underline">info@maplecustomhomes.ca</a> to schedule a free, no-obligation consultation and estimate.</>,
+    richAnswer: <>Yes. <Link href="/contact" className="text-accent underline hover:no-underline">Contact us</Link> at <a href="tel:6479604017" className="text-accent underline hover:no-underline">(647) 960-4017</a> or <a href="mailto:info@maplecustomhomes.ca" className="text-accent underline hover:no-underline">info@maplecustomhomes.ca</a> to schedule a free, no-obligation consultation and estimate.</>,
   },
   {
     question: "What sets Maple Custom Homes apart from other contractors?",
     answer:
       "We combine skilled trades, premium materials, and transparent communication. You get a dedicated project manager, weekly updates, detailed quotes with no hidden fees, and a team that stands behind its work.",
-    richAnswer: <>We combine skilled trades, premium materials, and transparent communication. You get a dedicated project manager, weekly updates, detailed quotes with no hidden fees, and a team that stands behind its work. <Link href="/about" className="text-accent hover:underline">Learn more about us</Link>.</>,
+    richAnswer: <>We combine skilled trades, premium materials, and transparent communication. You get a dedicated project manager, weekly updates, detailed quotes with no hidden fees, and a team that stands behind its work. <Link href="/about" className="text-accent underline hover:no-underline">Learn more about us</Link>.</>,
   },
   {
     question: "Do you do commercial work?",
     answer:
       "Yes. We handle commercial build-outs, tenant improvements, office renovations, and retail fit-outs across the GTA. We work around your business schedule to minimize disruption.",
-    richAnswer: <>Yes. We handle commercial build-outs, tenant improvements, office renovations, and retail fit-outs across the GTA. We work around your business schedule to minimize disruption. <Link href="/services#commercial" className="text-accent hover:underline">View our commercial services</Link>.</>,
+    richAnswer: <>Yes. We handle commercial build-outs, tenant improvements, office renovations, and retail fit-outs across the GTA. We work around your business schedule to minimize disruption. <Link href="/services#commercial" className="text-accent underline hover:no-underline">View our commercial services</Link>.</>,
   },
 ];
 
@@ -113,7 +113,7 @@ export default function FAQPage() {
       </section>
 
       {/* FAQ Accordion */}
-      <section className="bg-surface-white py-16 md:py-24 px-6 lg:px-8">
+      <div className="bg-surface-white py-16 md:py-24 px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           {FAQ_ITEMS.map((item, index) => (
             <details
@@ -132,7 +132,7 @@ export default function FAQPage() {
             </details>
           ))}
         </div>
-      </section>
+      </div>
 
       {/* CTA */}
       <CTABanner

@@ -144,11 +144,11 @@ export default function GalleryPage() {
       </section>
 
       {/* Gallery */}
-      <section className="bg-surface-white py-12 md:py-16 px-6 lg:px-8">
+      <div className="bg-surface-white py-12 md:py-16 px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <GalleryGrid projects={PROJECTS} categories={CATEGORIES} />
         </div>
-      </section>
+      </div>
 
       {/* CTA */}
       <CTABanner

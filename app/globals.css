@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* Accent palette — warm refined gold */
-  --color-accent: #C4973B;
-  --color-accent-dark: #A67C2A;
-  --color-accent-light: rgba(196, 151, 59, 0.08);
-  --color-accent-mid: rgba(196, 151, 59, 0.15);
+  /* Accent palette — deep gold (WCAG AA compliant) */
+  --color-accent: #8F6B1A;
+  --color-accent-dark: #6B5014;
+  --color-accent-light: rgba(143, 107, 26, 0.08);
+  --color-accent-mid: rgba(143, 107, 26, 0.15);
 
   /* Surface palette — warm tones */
   --color-surface-dark: #141416;
@@ -26,9 +26,9 @@
   --color-border-dark: rgba(255, 255, 255, 0.08);
 
   /* Legacy aliases for compatibility */
-  --color-gold: #C4973B;
-  --color-gold-dark: #A67C2A;
-  --color-gold-light: rgba(196, 151, 59, 0.08);
+  --color-gold: #8F6B1A;
+  --color-gold-dark: #6B5014;
+  --color-gold-light: rgba(143, 107, 26, 0.08);
 
   /* Font families */
   --font-sans: var(--font-inter), system-ui, sans-serif;
@@ -48,6 +48,6 @@ html {
 
 /* Selection color */
 ::selection {
-  background-color: rgba(196, 151, 59, 0.2);
+  background-color: rgba(143, 107, 26, 0.2);
   color: var(--color-text-primary);
 }

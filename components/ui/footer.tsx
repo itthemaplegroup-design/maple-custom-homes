@@ -34,7 +34,7 @@ export default function Footer() {
             <p className="text-sm text-text-on-dark-muted leading-relaxed max-w-xs">
               Trusted general contractor serving the Greater Toronto Area. Renovations, remodels, and commercial construction.
             </p>
-            <a href="https://www.instagram.com/maplecustomhomesltd/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-text-on-dark-muted hover:text-accent transition-colors mt-4 group">
+            <a href="https://www.instagram.com/maplecustomhomesltd/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram (opens in a new tab)" className="inline-flex items-center gap-2 text-sm text-text-on-dark-muted hover:text-accent transition-colors mt-4 group">
               <div className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-accent/10 group-hover:border-accent/30 transition-all">
                 <InstagramIcon className="w-4 h-4" />
               </div>

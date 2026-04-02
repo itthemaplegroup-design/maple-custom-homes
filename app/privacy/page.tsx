@@ -105,7 +105,7 @@ export default function PrivacyPage() {
         <ul className="list-none text-sm md:text-base text-text-secondary mt-3 space-y-1">
           <li>
             Phone:{" "}
-            <a href="tel:6479604017" className="text-accent hover:underline">
+            <a href="tel:6479604017" className="text-accent underline hover:no-underline">
               (647) 960-4017
             </a>
           </li>
@@ -113,7 +113,7 @@ export default function PrivacyPage() {
             Email:{" "}
             <a
               href="mailto:info@maplecustomhomes.ca"
-              className="text-accent hover:underline"
+              className="text-accent underline hover:no-underline"
             >
               info@maplecustomhomes.ca
             </a>

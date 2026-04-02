@@ -63,7 +63,7 @@ export function TextRevealHeading({
         >
           {word}
         </motion.span>
-      ))}
+      ))}{" "}
       {accentWords.map((word, index) => (
         <motion.span
           key={`accent-${index}`}

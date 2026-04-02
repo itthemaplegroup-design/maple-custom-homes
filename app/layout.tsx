@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: "%s | Maple Custom Homes",
   },
   description:
-    "Maple Custom Homes — Toronto's trusted general contractor for home renovations, kitchen remodels, basement finishing & commercial build-outs. Fully insured. Free estimates.",
+    "Toronto's trusted general contractor. Home renovations, kitchen remodels, basement finishing & commercial build-outs. Free estimates.",
   keywords: [
     "general contractor Toronto",
     "general contractor GTA",
@@ -84,7 +84,7 @@ export default function RootLayout({
     <html lang="en-CA" className={`${inter.variable} ${playfair.variable} h-full antialiased`}>
       <head>
         <link rel="manifest" href="/site.webmanifest" />
-        <meta name="theme-color" content="#C4973B" />
+        <meta name="theme-color" content="#8F6B1A" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
