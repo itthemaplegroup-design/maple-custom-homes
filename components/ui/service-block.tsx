@@ -16,7 +16,7 @@ export function ServiceBlock({ id, number, title, description, features, image, 
   const textCol = (
     <div className="py-4">
       <span className="inline-flex items-center text-xs font-semibold text-accent bg-accent-light py-1.5 px-4 rounded-lg tracking-[1px]">{number}</span>
-      <h3 className="font-serif text-2xl md:text-3xl font-semibold text-text-primary mt-4 tracking-tight">{title}</h3>
+      <h2 className="font-serif text-2xl md:text-3xl font-semibold text-text-primary mt-4 tracking-tight">{title}</h2>
       <p className="text-base text-text-secondary mt-4 leading-relaxed">{description}</p>
       <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3">
         {features.map((f) => (

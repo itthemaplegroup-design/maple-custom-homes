@@ -1,5 +1,10 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "https://maplecustomhomes.ca" },
+};
 import { SectionHeader } from "@/components/ui/section-header";
 import { CTABanner } from "@/components/ui/cta-banner";
 import { StatsBar } from "@/components/ui/stats-bar";

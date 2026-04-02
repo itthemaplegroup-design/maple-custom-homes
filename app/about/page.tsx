@@ -4,14 +4,14 @@ import { CTABanner } from "@/components/ui/cta-banner";
 import { SITE } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "About Us | Licensed General Contractor Toronto",
+  title: "About Us | General Contractor Toronto",
   description:
-    "Maple Custom Homes is a licensed general contractor serving the Greater Toronto Area for over 15 years. Honest work, fair pricing, and quality craftsmanship on every project.",
+    "Maple Custom Homes is a trusted general contractor serving the Greater Toronto Area for over 15 years. Honest work, fair pricing, and quality craftsmanship on every project.",
   keywords: [
-    "licensed general contractor Toronto",
+    "general contractor Toronto",
     "trusted renovation company GTA",
     "experienced contractor Ontario",
-    "insured general contractor",
+    "insured general contractor GTA",
     "home renovation company Mississauga",
     "quality contractor Brampton",
   ],
@@ -47,6 +47,16 @@ const SERVICE_AREAS = [
   "North York",
   "Etobicoke",
   "Scarborough",
+  "Barrie",
+  "Oshawa",
+  "Niagara",
+  "London",
+  "Kitchener",
+  "Hamilton",
+  "Burlington",
+  "Guelph",
+  "Cambridge",
+  "St. Catharines",
 ];
 
 export default function AboutPage() {
@@ -60,6 +70,7 @@ export default function AboutPage() {
             label="ABOUT US"
             heading="Built on Integrity, Driven by Quality"
             subtitle="Over 15 years of honest work and lasting results across the Greater Toronto Area."
+            as="h1"
           />
         </div>
       </section>

@@ -35,28 +35,28 @@ const PROJECTS = [
   {
     src: "/images/fireplace-tall.jpg",
     alt: "Custom tall fireplace with diamond tile surround",
-    category: "Others",
+    category: "Fireplace",
     title: "Diamond Tile Fireplace",
     location: "Vaughan, ON",
   },
   {
     src: "/images/fireplace-tv.jpg",
     alt: "Fireplace with wall paneling and mounted TV",
-    category: "Others",
+    category: "Fireplace",
     title: "Paneled Media Wall",
     location: "Mississauga, ON",
   },
   {
     src: "/images/fireplace-detail.jpg",
     alt: "Fireplace detail with wainscoting and natural light",
-    category: "Others",
+    category: "Fireplace",
     title: "Wainscoting Detail",
     location: "Mississauga, ON",
   },
   {
     src: "/images/fireplace-finished.jpg",
     alt: "Full height fireplace with diamond pattern tile",
-    category: "Others",
+    category: "Fireplace",
     title: "Full-Height Fireplace",
     location: "Vaughan, ON",
   },
@@ -77,35 +77,35 @@ const PROJECTS = [
   {
     src: "/images/living-room.jpg",
     alt: "Open concept living room with fireplace overhead view",
-    category: "Others",
+    category: "Living Room",
     title: "Open Concept Living",
     location: "Vaughan, ON",
   },
   {
     src: "/images/vaulted-ceiling.jpg",
     alt: "Vaulted ceiling with crystal chandelier and iron railing",
-    category: "Others",
+    category: "New Construction",
     title: "Vaulted Entry with Chandelier",
     location: "Barrie, ON",
   },
   {
     src: "/images/house-construction.jpg",
     alt: "New house construction framing stage",
-    category: "Others",
+    category: "New Construction",
     title: "Custom Home — Framing",
     location: "Oshawa, ON",
   },
   {
     src: "/images/framing.jpg",
     alt: "Multi-unit new construction framing",
-    category: "Others",
+    category: "New Construction",
     title: "Multi-Unit Build",
     location: "Barrie, ON",
   },
   {
     src: "/images/heated-flooring.jpg",
     alt: "Radiant heated floor installation in new construction",
-    category: "Others",
+    category: "New Construction",
     title: "Heated Floor Installation",
     location: "GTA, ON",
   },
@@ -125,7 +125,7 @@ const PROJECTS = [
   },
 ];
 
-const CATEGORIES = ["All", "Kitchen", "Bathroom", "Basement"];
+const CATEGORIES = ["All", "Kitchen", "Bathroom", "Basement", "Fireplace", "Living Room", "New Construction"];
 
 export default function GalleryPage() {
   return (

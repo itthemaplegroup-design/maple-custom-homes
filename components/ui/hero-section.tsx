@@ -24,7 +24,7 @@ export function HeroSection() {
             className="inline-flex items-center gap-2 text-xs font-semibold text-accent uppercase tracking-[3px] mb-6"
           >
             <span className="w-8 h-px bg-accent" />
-            Licensed General Contractor
+            Trusted General Contractor
           </motion.div>
 
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-text-primary leading-[1.1] tracking-tight">
@@ -40,7 +40,7 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.6 }}
             className="text-base md:text-lg text-text-secondary mt-6 max-w-lg leading-relaxed"
           >
-            Licensed general contractor serving the GTA, Barrie, Oshawa, Niagara, London, Kitchener, and surrounding areas. Home renovations, kitchen remodels, basement finishing, and commercial build-outs — one team, one point of contact.
+            Trusted general contractor serving the GTA, Barrie, Oshawa, Niagara, London, Kitchener, and surrounding areas. Home renovations, kitchen remodels, basement finishing, and commercial build-outs — one team, one point of contact.
           </motion.p>
 
           <motion.div

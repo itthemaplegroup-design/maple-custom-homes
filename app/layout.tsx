@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: "%s | Maple Custom Homes",
   },
   description:
-    "Maple Custom Homes — Toronto's trusted general contractor for home renovations, kitchen remodels, basement finishing & commercial build-outs. Licensed & insured. Free estimates.",
+    "Maple Custom Homes — Toronto's trusted general contractor for home renovations, kitchen remodels, basement finishing & commercial build-outs. Fully insured. Free estimates.",
   keywords: [
     "general contractor Toronto",
     "general contractor GTA",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     "general contractor North York",
     "home renovation Brampton",
     "kitchen remodel Vaughan",
-    "licensed renovation contractor GTA",
+    "renovation contractor GTA",
     "general contractor Barrie",
     "renovation contractor Oshawa",
     "general contractor Niagara",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Maple Custom Homes | General Contractor Toronto & GTA",
-    description: "Licensed general contractor serving Toronto and the GTA. Home renovations, kitchen & bath remodels, basement finishing, commercial build-outs. Get a free estimate.",
+    description: "Trusted general contractor serving Toronto and the GTA. Home renovations, kitchen & bath remodels, basement finishing, commercial build-outs. Get a free estimate.",
     url: "https://maplecustomhomes.ca",
     siteName: "Maple Custom Homes",
     locale: "en_CA",
@@ -56,14 +56,14 @@ export const metadata: Metadata = {
         url: "https://maplecustomhomes.ca/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Maple Custom Homes — Licensed General Contractor Toronto & GTA",
+        alt: "Maple Custom Homes — General Contractor Toronto & GTA",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Maple Custom Homes | General Contractor Toronto & GTA",
-    description: "Licensed general contractor serving Toronto and the GTA. Home renovations, kitchen & bath remodels, basement finishing, commercial build-outs.",
+    description: "Trusted general contractor serving Toronto and the GTA. Home renovations, kitchen & bath remodels, basement finishing, commercial build-outs.",
     images: ["https://maplecustomhomes.ca/images/og-image.jpg"],
   },
   robots: {
@@ -83,6 +83,8 @@ export default function RootLayout({
   return (
     <html lang="en-CA" className={`${inter.variable} ${playfair.variable} h-full antialiased`}>
       <head>
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="theme-color" content="#C4973B" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -94,7 +96,7 @@ export default function RootLayout({
               telephone: "+1-647-960-4017",
               email: "info@maplecustomhomes.ca",
               description:
-                "Licensed general contractor serving the Greater Toronto Area. Home renovations, kitchen and bathroom remodelling, basement finishing, commercial build-outs, painting, drywall, and custom builds.",
+                "Trusted general contractor serving the Greater Toronto Area. Home renovations, kitchen and bathroom remodelling, basement finishing, commercial build-outs, painting, drywall, and custom builds.",
               areaServed: [
                 { "@type": "City", name: "Toronto" },
                 { "@type": "City", name: "Mississauga" },
@@ -130,6 +132,9 @@ export default function RootLayout({
                   opens: "09:00",
                   closes: "14:00",
                 },
+              ],
+              sameAs: [
+                "https://www.instagram.com/maplecustomhomesltd/",
               ],
               priceRange: "$$",
               hasOfferCatalog: {

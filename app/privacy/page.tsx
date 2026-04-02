@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy | Maple Custom Homes Toronto",
   description:
-    "Privacy Policy for Maple Custom Homes. Learn how we collect, use, and protect your personal information. Licensed general contractor serving Toronto & GTA.",
+    "Privacy Policy for Maple Custom Homes. Learn how we collect, use, and protect your personal information. General contractor serving Toronto & GTA.",
   alternates: { canonical: "https://maplecustomhomes.ca/privacy" },
 };
 
@@ -105,7 +105,7 @@ export default function PrivacyPage() {
         <ul className="list-none text-sm md:text-base text-text-secondary mt-3 space-y-1">
           <li>
             Phone:{" "}
-            <a href="tel:6479604017" className="text-gold hover:underline">
+            <a href="tel:6479604017" className="text-accent hover:underline">
               (647) 960-4017
             </a>
           </li>
@@ -113,7 +113,7 @@ export default function PrivacyPage() {
             Email:{" "}
             <a
               href="mailto:info@maplecustomhomes.ca"
-              className="text-gold hover:underline"
+              className="text-accent hover:underline"
             >
               info@maplecustomhomes.ca
             </a>

@@ -108,7 +108,7 @@ export default function TermsPage() {
         <ul className="list-none text-sm md:text-base text-text-secondary mt-3 space-y-1">
           <li>
             Phone:{" "}
-            <a href="tel:6479604017" className="text-gold hover:underline">
+            <a href="tel:6479604017" className="text-accent hover:underline">
               (647) 960-4017
             </a>
           </li>
@@ -116,7 +116,7 @@ export default function TermsPage() {
             Email:{" "}
             <a
               href="mailto:info@maplecustomhomes.ca"
-              className="text-gold hover:underline"
+              className="text-accent hover:underline"
             >
               info@maplecustomhomes.ca
             </a>

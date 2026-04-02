@@ -32,7 +32,7 @@ export default function Footer() {
           <div>
             <Image src="/logo.svg" alt="Maple Custom Homes general contractor Toronto" width={200} height={60} className="h-14 w-auto mb-4 bg-white/90 rounded-lg px-3 py-1.5" />
             <p className="text-sm text-text-on-dark-muted leading-relaxed max-w-xs">
-              Licensed general contractor serving the Greater Toronto Area. Renovations, remodels, and commercial construction.
+              Trusted general contractor serving the Greater Toronto Area. Renovations, remodels, and commercial construction.
             </p>
             <a href="https://www.instagram.com/maplecustomhomesltd/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-text-on-dark-muted hover:text-accent transition-colors mt-4 group">
               <div className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-accent/10 group-hover:border-accent/30 transition-all">

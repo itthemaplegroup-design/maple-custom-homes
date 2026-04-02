@@ -50,8 +50,8 @@ export const STATS = [
 ];
 
 export const TRUST_INDICATORS = [
-  "Fully Licensed",
   "Fully Insured",
+  "Bonded",
   "15+ Years Experience",
   "500+ Projects Completed",
 ];
@@ -114,7 +114,7 @@ export const SERVICES = [
 ];
 
 export const WHY_CHOOSE_US = [
-  { icon: Shield, title: "Licensed & Insured", description: "Fully licensed general contractor with comprehensive liability coverage on every project" },
+  { icon: Shield, title: "Insured & Bonded", description: "Comprehensive liability coverage and bonding on every project for your peace of mind" },
   { icon: Clock, title: "On-Time Delivery", description: "Dedicated project managers tracking milestones weekly \u2014 we stick to the schedule" },
   { icon: Gem, title: "Quality Workmanship", description: "Skilled trades, premium materials, and rigorous quality checks at every phase" },
   { icon: FileText, title: "Transparent Pricing", description: "Detailed quotes with no hidden fees \u2014 you know the cost before we start" },

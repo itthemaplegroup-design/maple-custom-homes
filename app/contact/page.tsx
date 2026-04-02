@@ -7,7 +7,7 @@ import { SITE, PROCESS_STEPS } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Contact Us | Free Renovation Estimate Toronto & GTA",
-  description: "Contact Maple Custom Homes for a free renovation consultation in Toronto and the GTA. Call (647) 960-4017. Licensed general contractor, fast response.",
+  description: "Contact Maple Custom Homes for a free renovation consultation in Toronto and the GTA. Call (647) 960-4017. Fast response, free estimates.",
   keywords: [
     "free renovation estimate Toronto",
     "contact general contractor GTA",
