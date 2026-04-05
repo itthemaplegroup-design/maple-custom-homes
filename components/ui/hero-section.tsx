@@ -59,7 +59,7 @@ export function HeroSection() {
           <div className="bg-surface-dark-alt rounded-2xl p-5 shadow-2xl">
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-surface-dark">
               <Image
-                src="/images/vaulted-ceiling.jpg"
+                src="/images/vaulted-ceiling.avif"
                 alt="Custom home build with vaulted ceiling and crystal chandelier by Maple Custom Homes in Barrie Ontario"
                 fill
                 className="object-cover"

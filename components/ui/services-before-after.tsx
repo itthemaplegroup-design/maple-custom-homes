@@ -10,12 +10,12 @@ export function ServicesBeforeAfter() {
         <div className="rounded-2xl overflow-hidden ring-1 ring-white/10">
           <ImageComparison className="aspect-[4/3] w-full" enableHover>
             <ImageComparisonImage
-              src="/images/before1.jpg"
+              src="/images/before1.avif"
               alt="Kitchen before renovation by general contractor in Toronto GTA"
               position="left"
             />
             <ImageComparisonImage
-              src="/images/after1.jpg"
+              src="/images/after1.avif"
               alt="Modern kitchen after remodel by Maple Custom Homes Toronto"
               position="right"
             />
@@ -31,12 +31,12 @@ export function ServicesBeforeAfter() {
         <div className="rounded-2xl overflow-hidden ring-1 ring-white/10">
           <ImageComparison className="aspect-[4/3] w-full" enableHover>
             <ImageComparisonImage
-              src="/images/before2.jpg"
+              src="/images/before2.avif"
               alt="Kitchen before renovation by contractor in Mississauga GTA"
               position="left"
             />
             <ImageComparisonImage
-              src="/images/after2.jpg"
+              src="/images/after2.avif"
               alt="Modern kitchen after renovation by Maple Custom Homes GTA"
               position="right"
             />

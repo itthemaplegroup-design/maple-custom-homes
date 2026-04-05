@@ -69,7 +69,7 @@ export const SERVICES = [
     title: "Home Renovations",
     description: "From structural changes to complete interior overhauls, we handle every aspect of your renovation. Open-concept conversions, room additions, and whole-home upgrades \u2014 delivered on time with minimal disruption to your daily life.",
     features: ["Structural Modifications", "Open-Concept Conversions", "Room Additions", "Full Interior Overhauls"],
-    image: "/images/vaulted-ceiling.jpg",
+    image: "/images/vaulted-ceiling.avif",
   },
   {
     id: "kitchen-bath",
@@ -77,7 +77,7 @@ export const SERVICES = [
     title: "Kitchen & Bathroom Remodeling",
     description: "The rooms that matter most, built to the highest standard. Custom cabinetry, premium countertops, modern tile work, and complete plumbing and electrical upgrades \u2014 designed for how you actually live.",
     features: ["Custom Cabinetry", "Premium Countertops", "Plumbing & Electrical", "Tile & Finishes"],
-    image: "/images/after2.jpg",
+    image: "/images/after2.avif",
   },
   {
     id: "basement",
@@ -85,7 +85,7 @@ export const SERVICES = [
     title: "Basement Finishing",
     description: "Turn unused square footage into functional living space. Home theatres, guest suites, home offices, and rental units \u2014 fully framed, insulated, drywalled, and finished to code.",
     features: ["Framing & Insulation", "Electrical & Plumbing", "Flooring & Drywall", "Egress Windows"],
-    image: "/images/wine-bar.jpg",
+    image: "/images/wine-bar.avif",
   },
   {
     id: "commercial",
@@ -93,7 +93,7 @@ export const SERVICES = [
     title: "Commercial Build-Outs",
     description: "Professional commercial construction for retail, office, and restaurant spaces. We work around your schedule to minimize downtime and deliver a space that\u2019s ready for business.",
     features: ["Retail Fit-Outs", "Office Renovations", "After-Hours Work", "Code Compliance"],
-    image: "/images/house-construction.jpg",
+    image: "/images/house-construction.avif",
   },
   {
     id: "painting",
@@ -101,7 +101,7 @@ export const SERVICES = [
     title: "Painting & Drywall",
     description: "Expert interior and exterior painting, drywall installation, patching, and finishing. Clean prep work, premium paints, and attention to detail that shows in every corner.",
     features: ["Interior Painting", "Exterior Painting", "Drywall Install & Repair", "Texture & Finishing"],
-    image: "/images/fireplace-tv.jpg",
+    image: "/images/fireplace-tv.avif",
   },
   {
     id: "custom-builds",
@@ -109,7 +109,7 @@ export const SERVICES = [
     title: "Custom Builds",
     description: "New construction from the ground up. Custom homes, additions, and ground-up builds \u2014 designed to your specifications and built to the highest standards.",
     features: ["Custom Homes", "Additions", "Framing & Structure", "Full Project Management"],
-    image: "/images/framing.jpg",
+    image: "/images/framing.avif",
   },
 ];
 

@@ -16,12 +16,12 @@ export function BeforeAfterSection() {
         <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden ring-1 ring-white/10">
           <ImageComparison className="aspect-video w-full" enableHover>
             <ImageComparisonImage
-              src="/images/before1.jpg"
+              src="/images/before1.avif"
               alt="Kitchen before renovation by Maple Custom Homes general contractor Toronto"
               position="left"
             />
             <ImageComparisonImage
-              src="/images/after1.jpg"
+              src="/images/after1.avif"
               alt="Modern kitchen after renovation by Maple Custom Homes contractor in the GTA"
               position="right"
             />
