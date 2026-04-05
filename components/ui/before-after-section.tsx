@@ -18,14 +18,14 @@ export function BeforeAfterSection() {
             <ImageComparisonImage
               src="/images/before1.avif"
               srcSet="/images/before1-400.avif 400w, /images/before1-640.avif 640w, /images/before1-828.avif 828w, /images/before1.avif 1072w"
-              sizes="(max-width: 768px) 100vw, 896px"
+              sizes="(max-width: 768px) calc(100vw - 48px), 640px"
               alt="Kitchen before renovation by Maple Custom Homes general contractor Toronto"
               position="left"
             />
             <ImageComparisonImage
               src="/images/after1.avif"
               srcSet="/images/after1-400.avif 400w, /images/after1-640.avif 640w, /images/after1-828.avif 828w, /images/after1.avif 1079w"
-              sizes="(max-width: 768px) 100vw, 896px"
+              sizes="(max-width: 768px) calc(100vw - 48px), 640px"
               alt="Modern kitchen after renovation by Maple Custom Homes contractor in the GTA"
               position="right"
             />
