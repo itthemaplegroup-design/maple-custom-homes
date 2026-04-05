@@ -44,7 +44,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-sm font-semibold text-text-on-dark mb-4 tracking-wide">Quick Links</h4>
+            <p className="text-sm font-semibold text-text-on-dark mb-4 tracking-wide">Quick Links</p>
             <nav className="flex flex-col gap-2.5">
               {[
                 { label: "Home", href: "/" },
@@ -63,7 +63,7 @@ export default function Footer() {
 
           {/* Service Areas */}
           <div>
-            <h4 className="text-sm font-semibold text-text-on-dark mb-4 tracking-wide">Service Areas</h4>
+            <p className="text-sm font-semibold text-text-on-dark mb-4 tracking-wide">Service Areas</p>
             <div className="flex flex-wrap gap-x-1 gap-y-1">
               {SERVICE_AREAS.map((area, i) => (
                 <span key={area} className="text-sm text-text-on-dark-muted">
