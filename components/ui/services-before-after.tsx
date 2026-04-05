@@ -11,11 +11,15 @@ export function ServicesBeforeAfter() {
           <ImageComparison className="aspect-[4/3] w-full" enableHover>
             <ImageComparisonImage
               src="/images/before1.avif"
+              srcSet="/images/before1-400.avif 400w, /images/before1-640.avif 640w, /images/before1-828.avif 828w, /images/before1.avif 1072w"
+              sizes="(max-width: 768px) 100vw, 50vw"
               alt="Kitchen before renovation by general contractor in Toronto GTA"
               position="left"
             />
             <ImageComparisonImage
               src="/images/after1.avif"
+              srcSet="/images/after1-400.avif 400w, /images/after1-640.avif 640w, /images/after1-828.avif 828w, /images/after1.avif 1079w"
+              sizes="(max-width: 768px) 100vw, 50vw"
               alt="Modern kitchen after remodel by Maple Custom Homes Toronto"
               position="right"
             />
@@ -32,11 +36,15 @@ export function ServicesBeforeAfter() {
           <ImageComparison className="aspect-[4/3] w-full" enableHover>
             <ImageComparisonImage
               src="/images/before2.avif"
+              srcSet="/images/before2-400.avif 400w, /images/before2-640.avif 640w, /images/before2.avif 1984w"
+              sizes="(max-width: 768px) 100vw, 50vw"
               alt="Kitchen before renovation by contractor in Mississauga GTA"
               position="left"
             />
             <ImageComparisonImage
               src="/images/after2.avif"
+              srcSet="/images/after2-400.avif 400w, /images/after2-640.avif 640w, /images/after2.avif 2000w"
+              sizes="(max-width: 768px) 100vw, 50vw"
               alt="Modern kitchen after renovation by Maple Custom Homes GTA"
               position="right"
             />

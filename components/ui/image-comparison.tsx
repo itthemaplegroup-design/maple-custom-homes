@@ -83,11 +83,15 @@ const ImageComparisonImage = ({
   className,
   alt,
   src,
+  srcSet,
+  sizes,
   position
 }: {
   className?: string;
   alt: string;
   src: string;
+  srcSet?: string;
+  sizes?: string;
   position: "left" | "right";
 }) => {
   const { motionSliderPosition } = useContext(ImageComparisonContext)!;
@@ -100,6 +104,8 @@ const ImageComparisonImage = ({
   return (
     <motion.img
       src={src}
+      srcSet={srcSet}
+      sizes={sizes}
       alt={alt}
       className={cn("absolute inset-0 h-full w-full object-cover", className)}
       style={{
