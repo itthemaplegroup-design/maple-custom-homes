@@ -85,6 +85,14 @@ export default function RootLayout({
       <head>
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#8F6B1A" />
+        <link
+          rel="preload"
+          as="image"
+          type="image/avif"
+          href="/images/vaulted-ceiling-640.avif"
+          imageSrcSet="/images/vaulted-ceiling-324.avif 324w, /images/vaulted-ceiling-480.avif 480w, /images/vaulted-ceiling-640.avif 640w, /images/vaulted-ceiling-828.avif 828w, /images/vaulted-ceiling-1200.avif 1200w, /images/vaulted-ceiling.avif 1500w"
+          imageSizes="(max-width: 1024px) calc(100vw - 88px), calc(50vw - 88px)"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
