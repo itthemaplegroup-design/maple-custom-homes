@@ -60,7 +60,7 @@ export function HeroSection() {
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-surface-dark">
               <img
                 src="/images/vaulted-ceiling.avif"
-                srcSet="/images/vaulted-ceiling-480.avif 480w, /images/vaulted-ceiling-640.avif 640w, /images/vaulted-ceiling-828.avif 828w, /images/vaulted-ceiling-1200.avif 1200w, /images/vaulted-ceiling.avif 1500w"
+                srcSet="/images/vaulted-ceiling-324.avif 324w, /images/vaulted-ceiling-480.avif 480w, /images/vaulted-ceiling-640.avif 640w, /images/vaulted-ceiling-828.avif 828w, /images/vaulted-ceiling-1200.avif 1200w, /images/vaulted-ceiling.avif 1500w"
                 sizes="(max-width: 1024px) calc(100vw - 88px), calc(50vw - 88px)"
                 alt="Custom home build with vaulted ceiling and crystal chandelier by Maple Custom Homes in Barrie Ontario"
                 className="absolute inset-0 w-full h-full object-cover"
