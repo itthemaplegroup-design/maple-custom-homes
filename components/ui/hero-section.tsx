@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "motion/react";
 import { TRUST_INDICATORS } from "@/lib/constants";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { TextRevealHeading } from "@/components/ui/text-reveal";
@@ -17,15 +16,13 @@ export function HeroSection() {
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center relative">
         {/* Left */}
         <div>
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+          <div
             className="inline-flex items-center gap-2 text-xs font-semibold text-accent uppercase tracking-[3px] mb-6"
+            style={{ animation: "fade-in-left 0.5s ease 0.1s both" }}
           >
             <span className="w-8 h-px bg-accent" />
             Trusted General Contractor
-          </motion.div>
+          </div>
 
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-text-primary leading-[1.1] tracking-tight">
             <TextRevealHeading
@@ -34,20 +31,16 @@ export function HeroSection() {
             />
           </h1>
 
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
+          <p
             className="text-base md:text-lg text-text-secondary mt-6 max-w-lg leading-relaxed"
+            style={{ animation: "fade-in 0.5s ease 0.6s both" }}
           >
             Trusted general contractor serving the GTA, Barrie, Oshawa, Niagara, London, Kitchener, and surrounding areas. Home renovations, kitchen remodels, basement finishing, and commercial build-outs — one team, one point of contact.
-          </motion.p>
+          </p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.8 }}
+          <div
             className="flex flex-col sm:flex-row gap-4 mt-10"
+            style={{ animation: "fade-in-up 0.5s ease 0.8s both" }}
           >
             <ShimmerButton href="/contact">
               Get a Free Estimate
@@ -55,15 +48,13 @@ export function HeroSection() {
             <Link href="/services" className="border border-text-primary/20 text-text-primary font-semibold py-3.5 px-8 rounded-lg hover:bg-text-primary hover:text-white transition-all text-center">
               View Our Services
             </Link>
-          </motion.div>
+          </div>
         </div>
 
         {/* Right — Featured project card */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+        <div
           className="relative lg:rotate-2 lg:hover:rotate-0 transition-transform duration-500"
+          style={{ animation: "slide-up-fade 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both" }}
         >
           <div className="bg-surface-dark-alt rounded-2xl p-5 shadow-2xl">
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-surface-dark">
@@ -87,15 +78,13 @@ export function HeroSection() {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
 
       {/* Trust indicators */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 1 }}
+      <div
         className="max-w-6xl mx-auto border-t border-border-light mt-12 md:mt-20 pt-8 flex flex-wrap justify-center gap-x-8 gap-y-3"
+        style={{ animation: "fade-in 0.5s ease 1s both" }}
       >
         {TRUST_INDICATORS.map((t) => (
           <span key={t} className="text-sm text-text-muted flex items-center gap-2">
@@ -103,7 +92,7 @@ export function HeroSection() {
             {t}
           </span>
         ))}
-      </motion.div>
+      </div>
     </section>
   );
 }

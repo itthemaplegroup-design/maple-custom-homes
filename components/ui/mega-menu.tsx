@@ -1,4 +1,5 @@
 import * as React from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
 import { ChevronDown } from "lucide-react";
 
@@ -38,21 +39,8 @@ const MegaMenu = React.forwardRef<HTMLUListElement, MegaMenuProps>(
         {...props}
       >
         {items.map((navItem) => {
-          const Tag = navItem.link ? "a" : "span";
-          const tagProps = navItem.link ? { href: navItem.link } : {};
-          return (
-          <li
-            key={navItem.label}
-            className="relative"
-            onMouseEnter={() => handleHover(navItem.label)}
-            onMouseLeave={() => handleHover(null)}
-          >
-            <Tag
-              {...tagProps}
-              className="relative flex cursor-pointer items-center justify-center gap-1 py-2 px-4 text-sm text-text-secondary transition-colors duration-200 hover:text-text-primary group"
-              onMouseEnter={() => setIsHover(navItem.id)}
-              onMouseLeave={() => setIsHover(null)}
-            >
+          const navContent = (
+            <>
               <span className="relative z-10 font-medium">{navItem.label}</span>
               {navItem.subMenus && (
                 <ChevronDown
@@ -70,13 +58,40 @@ const MegaMenu = React.forwardRef<HTMLUListElement, MegaMenuProps>(
                   }}
                 />
               )}
-            </Tag>
+            </>
+          );
+          const navClassName = "relative flex cursor-pointer items-center justify-center gap-1 py-2 px-4 text-sm text-text-secondary transition-colors duration-200 hover:text-text-primary group";
+          return (
+          <li
+            key={navItem.label}
+            className="relative"
+            onMouseEnter={() => handleHover(navItem.label)}
+            onMouseLeave={() => handleHover(null)}
+          >
+            {navItem.link ? (
+              <Link
+                href={navItem.link}
+                className={navClassName}
+                onMouseEnter={() => setIsHover(navItem.id)}
+                onMouseLeave={() => setIsHover(null)}
+              >
+                {navContent}
+              </Link>
+            ) : (
+              <span
+                className={navClassName}
+                onMouseEnter={() => setIsHover(navItem.id)}
+                onMouseLeave={() => setIsHover(null)}
+              >
+                {navContent}
+              </span>
+            )}
 
             <AnimatePresence>
               {openMenu === navItem.label && navItem.subMenus && (
-                <div className="absolute left-0 top-full w-auto pt-3 z-10">
+                <div className="absolute left-1/2 -translate-x-1/2 top-full w-auto pt-3 z-10 max-w-[calc(100vw-2rem)]">
                   <motion.div
-                    className="w-max border border-border-light bg-white p-5 shadow-xl shadow-black/8"
+                    className="w-max max-w-[calc(100vw-2rem)] border border-border-light bg-white p-5 shadow-xl shadow-black/8"
                     style={{
                       borderRadius: 16,
                     }}
@@ -93,7 +108,7 @@ const MegaMenu = React.forwardRef<HTMLUListElement, MegaMenuProps>(
                               const Icon = item.icon;
                               return (
                                 <li key={item.label}>
-                                  <a
+                                  <Link
                                     href={item.href || "/services"}
                                     className="flex items-start space-x-3 group"
                                   >
@@ -108,7 +123,7 @@ const MegaMenu = React.forwardRef<HTMLUListElement, MegaMenuProps>(
                                         {item.description}
                                       </p>
                                     </div>
-                                  </a>
+                                  </Link>
                                 </li>
                               );
                             })}

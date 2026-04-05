@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "motion/react";
+import { useRef, useEffect, useState } from "react";
 import { TestimonialsColumn, type Testimonial } from "@/components/ui/testimonials-column";
 
 const testimonials: Testimonial[] = [
@@ -64,15 +64,32 @@ const secondColumn = testimonials.slice(3, 6);
 const thirdColumn = testimonials.slice(6, 9);
 
 export function TestimonialsSection() {
+  const headerRef = useRef<HTMLDivElement>(null);
+  const [headerVisible, setHeaderVisible] = useState(false);
+
+  useEffect(() => {
+    const el = headerRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setHeaderVisible(true); observer.unobserve(el); } },
+      { threshold: 0.2 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className="bg-surface-warm py-16 md:py-24 px-6 lg:px-8 relative">
       <div className="max-w-6xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          viewport={{ once: true }}
+        <div
+          ref={headerRef}
           className="flex flex-col items-center justify-center max-w-xl mx-auto mb-14"
+          style={{
+            opacity: headerVisible ? 1 : 0,
+            animation: headerVisible
+              ? "slide-up-fade 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both"
+              : "none",
+          }}
         >
           <p className="text-xs font-semibold text-accent uppercase tracking-[3px]">TESTIMONIALS</p>
           <h2 className="font-serif text-3xl md:text-4xl font-semibold text-text-primary tracking-tight mt-3 text-center">
@@ -81,7 +98,7 @@ export function TestimonialsSection() {
           <p className="text-base md:text-lg text-text-secondary text-center mt-4 leading-relaxed">
             Hear from homeowners and business owners across the GTA.
           </p>
-        </motion.div>
+        </div>
 
         <div className="flex justify-center gap-6 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[740px] overflow-hidden">
           <TestimonialsColumn testimonials={firstColumn} duration={15} />

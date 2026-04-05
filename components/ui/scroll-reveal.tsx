@@ -1,18 +1,16 @@
 "use client";
 
-import { motion } from "motion/react";
+import { useRef, useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
 type Direction = "up" | "down" | "left" | "right";
 
-function getHiddenStyle(direction: Direction): { opacity: number; filter: string; x?: number; y?: number } {
-  switch (direction) {
-    case "up": return { opacity: 0, filter: "blur(8px)", y: 60 };
-    case "down": return { opacity: 0, filter: "blur(8px)", y: -60 };
-    case "left": return { opacity: 0, filter: "blur(8px)", x: 60 };
-    case "right": return { opacity: 0, filter: "blur(8px)", x: -60 };
-  }
-}
+const animationMap: Record<Direction, string> = {
+  up: "reveal-up",
+  down: "reveal-down",
+  left: "reveal-left",
+  right: "reveal-right",
+};
 
 interface ScrollRevealProps {
   children: React.ReactNode;
@@ -29,17 +27,41 @@ export function ScrollReveal({
   delay = 0,
   once = true,
 }: ScrollRevealProps) {
-  const hidden = getHiddenStyle(direction);
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          if (once) observer.unobserve(el);
+        } else if (!once) {
+          setVisible(false);
+        }
+      },
+      { threshold: 0.2, rootMargin: "-50px" }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [once]);
 
   return (
-    <motion.div
-      initial={hidden}
-      whileInView={{ opacity: 1, filter: "blur(0px)", x: 0, y: 0 }}
-      viewport={{ once, amount: 0.2, margin: "-50px" }}
-      transition={{ duration: 0.7, delay, ease: [0.25, 0.25, 0.25, 0.75] }}
+    <div
+      ref={ref}
       className={cn(className)}
+      style={{
+        opacity: visible ? 1 : 0,
+        animation: visible
+          ? `${animationMap[direction]} 0.7s cubic-bezier(0.25, 0.25, 0.25, 0.75) ${delay}s both`
+          : "none",
+      }}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }

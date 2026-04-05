@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 
 interface TextRevealProps {
@@ -13,19 +12,15 @@ export function TextReveal({ text, className, delay = 0 }: TextRevealProps) {
   return (
     <span className={cn("inline", className)}>
       {text.split(" ").map((word, index) => (
-        <motion.span
+        <span
           key={index}
-          initial={{ opacity: 0, filter: "blur(6px)", y: 12 }}
-          animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-          transition={{
-            duration: 0.4,
-            delay: delay + index * 0.08,
-            ease: [0.25, 0.1, 0.25, 1],
-          }}
           className="mr-[0.25em] inline-block"
+          style={{
+            animation: `word-reveal 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) ${delay + index * 0.08}s both`,
+          }}
         >
           {word}
-        </motion.span>
+        </span>
       ))}
     </span>
   );
@@ -50,34 +45,26 @@ export function TextRevealHeading({
   return (
     <span className={cn(className)}>
       {allWords.map((word, index) => (
-        <motion.span
+        <span
           key={index}
-          initial={{ opacity: 0, filter: "blur(6px)", y: 12 }}
-          animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-          transition={{
-            duration: 0.4,
-            delay: index * 0.08,
-            ease: [0.25, 0.1, 0.25, 1],
-          }}
           className="mr-[0.25em] inline-block"
+          style={{
+            animation: `word-reveal 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) ${index * 0.08}s both`,
+          }}
         >
           {word}
-        </motion.span>
+        </span>
       ))}{" "}
       {accentWords.map((word, index) => (
-        <motion.span
+        <span
           key={`accent-${index}`}
-          initial={{ opacity: 0, filter: "blur(6px)", y: 12 }}
-          animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-          transition={{
-            duration: 0.4,
-            delay: (allWords.length + index) * 0.08,
-            ease: [0.25, 0.1, 0.25, 1],
-          }}
           className={cn("mr-[0.25em] inline-block", accentClassName)}
+          style={{
+            animation: `word-reveal 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) ${(allWords.length + index) * 0.08}s both`,
+          }}
         >
           {word}
-        </motion.span>
+        </span>
       ))}
     </span>
   );
