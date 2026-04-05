@@ -70,11 +70,11 @@ export function HeroSection() {
             </div>
             <div className="flex justify-between mt-4 text-sm px-1">
               <div>
-                <div className="text-accent font-medium">Custom Home Build</div>
+                <div className="text-accent-on-dark font-medium">Custom Home Build</div>
                 <div className="text-text-on-dark-muted text-xs mt-0.5">Barrie, ON</div>
               </div>
               <div className="text-right">
-                <div className="text-accent font-medium">New Construction</div>
+                <div className="text-accent-on-dark font-medium">New Construction</div>
                 <div className="text-text-on-dark-muted text-xs mt-0.5">Completed 2025</div>
               </div>
             </div>

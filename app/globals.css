@@ -17,9 +17,10 @@
   /* Text colors */
   --color-text-primary: #1C1C1E;
   --color-text-secondary: #5A5A5C;
-  --color-text-muted: #8E8E93;
+  --color-text-muted: #6B6B70;
   --color-text-on-dark: #F5F5F7;
   --color-text-on-dark-muted: #8E8E93;
+  --color-accent-on-dark: #C9A23A;
 
   /* Border colors */
   --color-border-light: #E8E5E1;
