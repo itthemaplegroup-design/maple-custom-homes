@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { SectionHeader } from "@/components/ui/section-header";
 import { CTABanner } from "@/components/ui/cta-banner";
-import { GalleryGrid } from "@/components/ui/gallery-grid";
+
+const GalleryGrid = dynamic(
+  () => import("@/components/ui/gallery-grid").then((m) => m.GalleryGrid),
+);
 
 export const metadata: Metadata = {
   title: "Renovation Gallery | Before & After Projects Toronto & GTA",

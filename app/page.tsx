@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -9,11 +10,14 @@ import { SectionHeader } from "@/components/ui/section-header";
 import { CTABanner } from "@/components/ui/cta-banner";
 import { StatsBar } from "@/components/ui/stats-bar";
 import { ServicePreviewGrid } from "@/components/ui/service-preview-card";
-import { BeforeAfterSection } from "@/components/ui/before-after-section";
 import { TestimonialsSection } from "@/components/ui/testimonials-section";
 import { HeroSection } from "@/components/ui/hero-section";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { WHY_CHOOSE_US } from "@/lib/constants";
+
+const BeforeAfterSection = dynamic(
+  () => import("@/components/ui/before-after-section").then((m) => m.BeforeAfterSection),
+);
 
 export default function HomePage() {
   return (

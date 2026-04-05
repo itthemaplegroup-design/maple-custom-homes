@@ -88,6 +88,12 @@ html {
   to   { opacity: 1; transform: translateY(0); }
 }
 
+/* ── Testimonials infinite scroll ── */
+@keyframes scroll-up {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-50%); }
+}
+
 /* ── Text-reveal word animation ── */
 @keyframes word-reveal {
   from { opacity: 0; filter: blur(6px); transform: translateY(12px); }

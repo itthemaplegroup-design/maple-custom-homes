@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { SectionHeader } from "@/components/ui/section-header";
 import { CTABanner } from "@/components/ui/cta-banner";
 import { ServiceBlock } from "@/components/ui/service-block";
 import { SERVICES } from "@/lib/constants";
-import { ServicesBeforeAfter } from "@/components/ui/services-before-after";
+
+const ServicesBeforeAfter = dynamic(
+  () => import("@/components/ui/services-before-after").then((m) => m.ServicesBeforeAfter),
+);
 
 export const metadata: Metadata = {
   title: "Renovation Services Toronto & GTA",
