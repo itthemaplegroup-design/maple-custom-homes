@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
+
 import { TRUST_INDICATORS } from "@/lib/constants";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { TextRevealHeading } from "@/components/ui/text-reveal";
@@ -58,13 +58,14 @@ export function HeroSection() {
         >
           <div className="bg-surface-dark-alt rounded-2xl p-5 shadow-2xl">
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-surface-dark">
-              <Image
+              <img
                 src="/images/vaulted-ceiling.avif"
-                alt="Custom home build with vaulted ceiling and crystal chandelier by Maple Custom Homes in Barrie Ontario"
-                fill
-                className="object-cover"
+                srcSet="/images/vaulted-ceiling-640.avif 640w, /images/vaulted-ceiling-828.avif 828w, /images/vaulted-ceiling-1200.avif 1200w, /images/vaulted-ceiling.avif 1500w"
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                priority
+                alt="Custom home build with vaulted ceiling and crystal chandelier by Maple Custom Homes in Barrie Ontario"
+                className="absolute inset-0 w-full h-full object-cover"
+                fetchPriority="high"
+                decoding="async"
               />
             </div>
             <div className="flex justify-between mt-4 text-sm px-1">
