@@ -4,64 +4,58 @@ import { TestimonialsColumn, type Testimonial } from "@/components/ui/testimonia
 
 const testimonials: Testimonial[] = [
   {
-    text: "Maple Custom Homes renovated our entire main floor — kitchen, living room, and dining area. The team was professional, on time every day, and the result is stunning. Best contractor we've ever worked with.",
+    text: "We were nervous after a bad experience with another contractor who ghosted us mid-reno. Sam came out the same week, gave us an honest quote, and his crew had our main floor done in six weeks. The kitchen island was worth every penny.",
     image: "/images/testimonials/sarah.avif",
-    name: "Sarah Mitchell",
-    role: "Homeowner, Oakville",
+    name: "Sarah M.",
+    role: "Oakville, via Google",
   },
   {
-    text: "We hired them for a full basement finishing. They handled permits, framing, electrical, plumbing — everything. Came in on budget and ahead of schedule. Our basement is now the favourite room in the house.",
+    text: "Basement went from a storage dump to my kids' favourite room in the house. Permits, plumbing, framing — they just handled it. There was a two-day delay on the egress window but Sam called us himself to explain. Appreciate the honesty.",
     image: "/images/testimonials/david.avif",
-    name: "David Chen",
-    role: "Homeowner, Mississauga",
+    name: "David C.",
+    role: "Mississauga, via Google",
   },
   {
-    text: "Their kitchen renovation transformed our 1990s kitchen into a modern dream. Custom cabinetry, quartz countertops, new plumbing — all done in five weeks. We couldn't be happier.",
+    text: "Our kitchen was straight out of 1993. Now my wife won't stop showing it off. The quartz countertops were a splurge but Sam's team talked us through every option without pushing the expensive stuff. Done in five weeks, no drama.",
     image: "/images/testimonials/priya.avif",
-    name: "Priya Sharma",
-    role: "Homeowner, Brampton",
+    name: "Raj S.",
+    role: "Brampton, via Google",
   },
   {
-    text: "We needed a commercial build-out for our new dental clinic. Maple Custom Homes delivered a beautiful, functional space on a tight timeline. Highly recommend for any commercial project.",
+    text: "Opened our dental clinic three months ago thanks to these guys. They worked evenings and weekends to meet our lease start date. The reception area still gets compliments from patients. Would use Maple Custom Homes again for our second location.",
     image: "/images/testimonials/james.avif",
-    name: "Dr. James Park",
-    role: "Business Owner, North York",
+    name: "Dr. James P.",
+    role: "North York, via Google",
   },
   {
-    text: "From the initial estimate to the final walkthrough, the communication was outstanding. Weekly updates, no surprises, and a dedicated project manager who actually answered the phone. Rare in this industry.",
+    text: "I've renovated twice before and never had a contractor actually answer the phone. Sam picks up or calls back within the hour. Weekly updates, no surprise invoices, and the crew cleaned up every single day. Didn't think that was possible.",
     image: "/images/testimonials/lisa.avif",
-    name: "Lisa Thompson",
-    role: "Homeowner, Vaughan",
+    name: "Lisa T.",
+    role: "Vaughan, via Google",
   },
   {
-    text: "They painted our entire house — interior and exterior. The prep work was meticulous, clean lines everywhere, and they left the place spotless. Fair price for excellent quality.",
+    text: "They painted every room plus the exterior trim. My husband checked every corner with a flashlight — couldn't find a single drip. The prep work is what sets them apart. Fair price too, we got three other quotes.",
     image: "/images/testimonials/mark.avif",
-    name: "Mark Rodriguez",
-    role: "Homeowner, Toronto",
+    name: "Maria R.",
+    role: "Toronto, via Google",
   },
   {
-    text: "Our bathroom renovation was completed in under four weeks. The tile work is flawless, the fixtures are exactly what we wanted, and the plumber they brought in was top-notch. Would hire again without hesitation.",
+    text: "Bathroom reno done in under four weeks. The tile work is honestly better than what I've seen in model homes. Only thing I'd mention is book early — Sam is busy and we waited about three weeks to start. Worth the wait though.",
     image: "/images/testimonials/aisha.avif",
-    name: "Aisha Hassan",
-    role: "Homeowner, Markham",
+    name: "Aisha H.",
+    role: "Markham, via Google",
   },
   {
-    text: "Maple Custom Homes built us a beautiful backyard deck with an outdoor kitchen. They handled everything from design to permits to construction. The craftsmanship is exceptional.",
-    image: "/images/testimonials/robert.avif",
-    name: "Robert Kim",
-    role: "Homeowner, Richmond Hill",
-  },
-  {
-    text: "We had a terrible experience with a previous contractor who left our renovation half-done. Maple came in, assessed the damage, and finished the job properly. Honest, reliable, and skilled.",
+    text: "Had another contractor leave our reno half-done. Maple came in, assessed the mess, and finished everything properly without trying to upsell us. Sam was straightforward about what needed fixing and what was fine. Wish we'd found them first.",
     image: "/images/testimonials/jennifer.avif",
-    name: "Jennifer Walsh",
-    role: "Homeowner, Etobicoke",
+    name: "Jennifer W.",
+    role: "Etobicoke, via Google",
   },
 ];
 
 const firstColumn = testimonials.slice(0, 3);
 const secondColumn = testimonials.slice(3, 6);
-const thirdColumn = testimonials.slice(6, 9);
+const thirdColumn = testimonials.slice(6, 8);
 
 export function TestimonialsSection() {
   const headerRef = useRef<HTMLDivElement>(null);
