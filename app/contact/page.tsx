@@ -23,9 +23,9 @@ export default function ContactPage() {
   return (
     <>
       {/* Page Header + Contact Cards */}
-      <section className="bg-surface-warm pt-12 md:pt-16 pb-14 md:pb-18 px-6 lg:px-8 relative overflow-hidden">
+      <section className="bg-surface-warm pt-14 md:pt-20 pb-16 md:pb-24 px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-72 h-72 bg-accent/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
-        <div className="max-w-6xl mx-auto [&>div]:mb-0 relative">
+        <div className="max-w-6xl mx-auto relative">
           <SectionHeader
             label="GET IN TOUCH"
             heading="Contact Us"
@@ -81,7 +81,7 @@ export default function ContactPage() {
       </section>
 
       {/* Our Process */}
-      <section className="bg-surface-white py-14 md:py-20 px-6 lg:px-8">
+      <section className="bg-surface-white py-16 md:py-24 px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <SectionHeader
             label="HOW IT WORKS"
