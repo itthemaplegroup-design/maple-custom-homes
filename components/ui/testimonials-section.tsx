@@ -17,7 +17,7 @@ const testimonials: Testimonial[] = [
   },
   {
     text: "Our kitchen was straight out of 1993. Now my wife won't stop showing it off. The quartz countertops were a splurge but Sam's team talked us through every option without pushing the expensive stuff. Done in five weeks, no drama.",
-    image: "/images/testimonials/priya.avif",
+    image: "/images/testimonials/mark.avif",
     name: "Raj S.",
     role: "Brampton, via Google",
   },
@@ -35,14 +35,14 @@ const testimonials: Testimonial[] = [
   },
   {
     text: "They painted every room plus the exterior trim. My husband checked every corner with a flashlight — couldn't find a single drip. The prep work is what sets them apart. Fair price too, we got three other quotes.",
-    image: "/images/testimonials/mark.avif",
-    name: "Maria R.",
+    image: "/images/testimonials/priya.avif",
+    name: "Priya K.",
     role: "Toronto, via Google",
   },
   {
     text: "Bathroom reno done in under four weeks. The tile work is honestly better than what I've seen in model homes. Only thing I'd mention is book early — Sam is busy and we waited about three weeks to start. Worth the wait though.",
     image: "/images/testimonials/aisha.avif",
-    name: "Aisha H.",
+    name: "Emma H.",
     role: "Markham, via Google",
   },
   {
